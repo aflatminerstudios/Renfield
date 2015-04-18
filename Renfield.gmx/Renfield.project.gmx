@@ -5,9 +5,31 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprFrog</sprite>
+    <sprite>sprites\sprFly</sprite>
+    <sprite>sprites\sprShot</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scrNull.gml</script>
+    <script>scripts\scrEat.gml</script>
+    <script>scripts\scrCreate.gml</script>
+    <script>scripts\scrFrogShoot.gml</script>
+    <script>scripts\scrFrogHoldShoot.gml</script>
+    <script>scripts\scrDamageWeapon.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\objWeapon</object>
+    <object>objects\objFrog</object>
+    <object>objects\objFly</object>
+    <object>objects\objTestControl</object>
+    <object>objects\objShot</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rmWeaponTest</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
