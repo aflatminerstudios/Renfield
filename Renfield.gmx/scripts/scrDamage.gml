@@ -3,7 +3,7 @@
 var instance = argument0;
 var damage = argument1;
 
-with (weapon) {
+with (instance) {
     hp -= damage;
     if (hp < 0) {
         alarm[0] = 1;

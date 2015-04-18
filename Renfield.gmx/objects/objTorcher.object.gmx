@@ -32,9 +32,10 @@ strength = 1;
 
 facing = 1;
 moveSpeed = room_speed / 60;
+baseSpeed = moveSpeed;
 walking = true;
 
-path = path0;
+path = pathRoomEnemyTest;
 attack = scrEnemyAttack;
 takeDamage = scrNull;
 path_start(path, 0, 0, 0);

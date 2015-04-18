@@ -6,11 +6,13 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprFrog</sprite>
-    <sprite>sprites\sprFly</sprite>
-    <sprite>sprites\sprShot</sprite>
     <sprite>sprites\sprEnemy</sprite>
     <sprite>sprites\sprCoffin</sprite>
+    <sprites name="Weapons">
+      <sprite>sprites\sprFrog</sprite>
+      <sprite>sprites\sprShot</sprite>
+      <sprite>sprites\sprFly</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -18,21 +20,25 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\scrNull.gml</script>
-    <script>scripts\scrEat.gml</script>
     <script>scripts\scrCreate.gml</script>
-    <script>scripts\scrFrogShoot.gml</script>
-    <script>scripts\scrFrogHoldShoot.gml</script>
-    <script>scripts\scrDamageWeapon.gml</script>
+    <script>scripts\scrDamage.gml</script>
     <scripts name="Enemies">
       <script>scripts\scrEnemyAttack.gml</script>
     </scripts>
+    <scripts name="Weapons">
+      <script>scripts\scrEat.gml</script>
+      <script>scripts\scrFrogShoot.gml</script>
+      <script>scripts\scrFrogHoldShoot.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\objWeapon</object>
-    <object>objects\objFrog</object>
-    <object>objects\objFly</object>
+    <objects name="Weapons">
+      <object>objects\objFly</object>
+      <object>objects\objShot</object>
+      <object>objects\objWeapon</object>
+      <object>objects\objFrog</object>
+    </objects>
     <object>objects\objTestControl</object>
-    <object>objects\objShot</object>
     <objects name="Enemies">
       <object>objects\objEnemy</object>
       <object>objects\objTorcher</object>

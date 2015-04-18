@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Setup Default values
 
-moveSpeed = 10;
+moveSpeed = room_speed / 6;
 hp = 5;
 canEat[0] = 0;
 xp = 0;
