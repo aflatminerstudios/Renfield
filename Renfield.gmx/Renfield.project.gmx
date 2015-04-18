@@ -19,6 +19,13 @@
   <backgrounds name="background"/>
   <paths name="paths">
     <path>paths\pathRoomEnemyTest</path>
+    <paths name="Level1">
+      <path>paths\pathLevel1A</path>
+      <path>paths\pathLevel1B</path>
+      <path>paths\pathLevel1C</path>
+      <path>paths\pathLevel1D</path>
+      <path>paths\pathLevel1E</path>
+    </paths>
   </paths>
   <scripts name="scripts">
     <script>scripts\scrNull.gml</script>
