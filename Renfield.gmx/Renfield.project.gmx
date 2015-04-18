@@ -13,6 +13,8 @@
       <sprite>sprites\sprShot</sprite>
       <sprite>sprites\sprFly</sprite>
     </sprites>
+    <sprite>sprites\sprSun</sprite>
+    <sprite>sprites\sprMoon</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -53,6 +55,9 @@
       <object>objects\objTorcher</object>
     </objects>
     <object>objects\objCoffin</object>
+    <object>objects\objMoon</object>
+    <object>objects\objSun</object>
+    <object>objects\objDayNightController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmWeaponTest</room>

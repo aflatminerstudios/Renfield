@@ -9,10 +9,8 @@ with (object) {
     }
 
     if (object_index == placed) {
-        show_debug_message("Basing");
         instance_change(base, false);
     } else {
-        show_debug_message("Placing");
         instance_change(placed, false);
     }
 }
