@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprEnemy</sprite>
     <sprite>sprites\sprCoffin</sprite>
     <sprites name="Weapons">
       <sprite>sprites\sprFrog</sprite>
@@ -18,17 +17,31 @@
     <sprite>sprites\sprSun</sprite>
     <sprite>sprites\sprMoon</sprite>
     <sprite>sprites\sprSpineTest</sprite>
+    <sprites name="Enemies">
+      <sprite>sprites\sprPeasant</sprite>
+      <sprite>sprites\sprPitchfork</sprite>
+      <sprite>sprites\sprBatteringRam</sprite>
+      <sprite>sprites\sprHelsing</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
-    <path>paths\pathRoomEnemyTest</path>
+    <paths name="Level1">
+      <path>paths\pathLevel1A</path>
+      <path>paths\pathLevel1B</path>
+      <path>paths\pathLevel1C</path>
+      <path>paths\pathLevel1D</path>
+      <path>paths\pathLevel1E</path>
+    </paths>
   </paths>
   <scripts name="scripts">
     <script>scripts\scrNull.gml</script>
     <script>scripts\scrCreate.gml</script>
     <script>scripts\scrDamage.gml</script>
     <scripts name="Enemies">
+      <script>scripts\scrSpawnEnemy.gml</script>
       <script>scripts\scrEnemyAttack.gml</script>
+      <script>scripts\scrCreateWave.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\scrEat.gml</script>
@@ -61,7 +74,10 @@
     <object>objects\objTestControl</object>
     <objects name="Enemies">
       <object>objects\objEnemy</object>
-      <object>objects\objTorcher</object>
+      <object>objects\objPeasant</object>
+      <object>objects\objPitchforker</object>
+      <object>objects\objBatteringRam</object>
+      <object>objects\objHelsing</object>
     </objects>
     <object>objects\objCoffin</object>
     <object>objects\objMoon</object>
@@ -69,8 +85,14 @@
     <object>objects\objDayNightController</object>
     <object>objects\objST</object>
     <object>objects\objNewTest</object>
+    <object>objects\objWave</object>
+    <object>objects\objWaveController</object>
+    <objects name="WaveControllers">
+    <object>objects\objLevel1Controller</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmLevel1</room>
     <room>rooms\rmWeaponTest</room>
     <room>rooms\roomEnemyTest</room>
     <room>rooms\rmSpineTest</room>

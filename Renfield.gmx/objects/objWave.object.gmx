@@ -27,20 +27,36 @@
             <kind>1</kind>
             <string>/// Initialization
 
-hp = 10;
-strength = 2;
-
-facing = 1;
-moveSpeed = room_speed / 60;
-baseSpeed = moveSpeed;
-walking = true;
-
+timer = 0;
+enemyIndex = 0;
 path = noone;
-attack = scrEnemyAttack;
-takeDamage = scrNull;
+enemies = noone;
 
-image_speed = 0;
-image_index = 0;
+alarm[2] = 60;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset alarm
+alarm[1] = 1;
 </string>
           </argument>
         </arguments>
@@ -63,9 +79,16 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set move speed back to base
+            <string>/// Spawn next enemy
 
-moveSpeed = baseSpeed;
+if (enemyIndex &lt; array_length_1d(enemies))
+{
+    enemy = scrSpawnEnemy(enemies[enemyIndex], path);
+    enemyIndex += 1;
+    alarm[2] = timer;
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -89,125 +112,7 @@ moveSpeed = baseSpeed;
           <argument>
             <kind>1</kind>
             <string>/// Destroy
-
 instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Walking
-
-if (walking)
-{
-    if (path != noone)
-    {
-        path_speed = (moveSpeed * facing);
-    }
-}
-else
-{
-    path_speed = 0;
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objCoffin">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Attack the coffin!
-
-script_execute(attack, other.id, strength);
-
-alarm[0] = 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objWeapon">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Attack the weapon!
-
-script_execute(attack, other.id, strength);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objFly">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Attack the fly, but go slow (if possible)!
-
-script_execute(attack, other.id, strength);
-
-moveSpeed = baseSpeed / 2;
-alarm[1] = room_speed / 2;
-
 </string>
           </argument>
         </arguments>
