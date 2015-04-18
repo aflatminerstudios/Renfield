@@ -67,6 +67,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmLevel1</room>
     <room>rooms\roomEnemyTest</room>
     <room>rooms\rmWeaponTest</room>
   </rooms>
