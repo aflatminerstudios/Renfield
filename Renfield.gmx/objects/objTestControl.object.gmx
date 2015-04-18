@@ -50,7 +50,9 @@ randomize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.placed = !global.placed;
+            <string>with (objWeapon) {
+    placed = !placed;
+}
 </string>
           </argument>
         </arguments>

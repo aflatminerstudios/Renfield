@@ -34,7 +34,7 @@ xp = 0;
 xpToLevel = 10;
 givenXp = 5;
 level = 1;
-
+placed = false;
 tarX = x;
 tarY = y;
 

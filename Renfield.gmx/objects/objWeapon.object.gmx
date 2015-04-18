@@ -34,6 +34,7 @@ xp = 0;
 xpToLevel = 0;
 givenXp = 0;
 level = 1;
+placed = false;
 
 tarX = x;
 tarY = y;
@@ -93,7 +94,7 @@ instance_destroy();
             <kind>1</kind>
             <string>///Default movement, random left and right
 
-if (global.placed) {
+if (placed) {
     speed = 0;
     script_execute(autoAttack);
 } else {

@@ -38,6 +38,8 @@ level = 1;
 tarX = x;
 tarY = y;
 
+placed = false;
+
 //scripts
 autoAttack = scrNull();
 playerAttack = scrNull();
