@@ -1,5 +1,4 @@
 ///scrFrogShoot()
-if (alarm[1] <= 0) {
+if (alarm[2] <= 0) {
    alarm[2] = room_speed / 2;
 }
-

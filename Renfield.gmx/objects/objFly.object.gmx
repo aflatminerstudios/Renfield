@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Setup Default values
 
-moveSpeed = room_speed / 6;
+moveSpeed = room_speed / 30;
 hp = 5;
 canEat[0] = 0;
 xp = 0;
@@ -44,6 +44,33 @@ placed = false;
 autoAttack = scrNull();
 playerAttack = scrNull();
 
+//For this object only
+damage = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objEnemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Do damage to enemy
+
+scrDamage(other, damage);
 </string>
           </argument>
         </arguments>
