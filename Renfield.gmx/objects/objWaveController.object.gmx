@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>/// Initialization
 
-wave1 = scrCreateWave(objTorcher, 6, 2, pathRoomEnemyTest);
-wave2 = scrCreateWave(objPitchforker, 2, 3, pathRoomEnemyTest);
 </string>
           </argument>
         </arguments>
