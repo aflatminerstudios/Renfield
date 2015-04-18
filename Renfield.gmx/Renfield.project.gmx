@@ -88,13 +88,12 @@
     <object>objects\objWave</object>
     <object>objects\objWaveController</object>
     <objects name="WaveControllers">
-    <object>objects\objLevel1Controller</object>
+      <object>objects\objLevel1Controller</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLevel1</room>
     <room>rooms\rmWeaponTest</room>
-    <room>rooms\roomEnemyTest</room>
     <room>rooms\rmSpineTest</room>
   </rooms>
   <constants number="3">
