@@ -6,19 +6,26 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprFloor</sprite>
+    <sprite>sprites\sprJumpThroughFloor</sprite>
     <sprite>sprites\sprRenfield</sprite>
+    <sprite>sprites\sprSolidWall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\objFloor</object>
+    <object>objects\objJumpThroughFloor</object>
+    <object>objects\objSolidFloor</object>
     <object>objects\objRenfield</object>
     <object>objects\objRoomSetup</object>
+    <object>objects\objParentFloor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomTestMicha</room>
   </rooms>
+  <constants number="2">
+    <constant name="SOLIDFLOOR">1</constant>
+    <constant name="JUMPTHROUGHFLOOR">2</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

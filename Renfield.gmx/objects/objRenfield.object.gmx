@@ -33,6 +33,8 @@ baseGravity = 0.3;
 jumpVelocity = 8;
 maxVelocity = 30;
 horizMvt = 3;
+
+vertSpeed = 0;
 </string>
           </argument>
         </arguments>
@@ -55,60 +57,119 @@ horizMvt = 3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check player controls
+            <string>/// Check player controls and check wall/floor collisions
+
+var strGround = "Not on Ground";
+if(onGround) strGround = "On Ground";
+show_debug_message("1) Renfield loc: (" + string(x) + ", " + string(y) + "), vertSpeed: " + string(vertSpeed) + ", " + strGround);
+
+
+var proposedXMvt = 0;
+var proposedYMvt = 0;
+
+
 
 if(keyboard_check(vk_left)){
-  x -= horizMvt;
+  proposedXMvt -= horizMvt;
 } else if(keyboard_check(vk_right)){
-  x += horizMvt;
+  proposedXMvt += horizMvt;
 }
 
-if(place_meeting(x, y + 1, objFloor)){
-  if(vspeed &gt;= 0){
-    gravity = 0;
-    vspeed = 0;
+if(onGround) {
+  if(keyboard_check_pressed(vk_space)){
+        vertSpeed = -jumpVelocity;
+  }
+}
+
+vertSpeed += baseGravity;
+
+if(vertSpeed &gt; maxVelocity)
+  vertSpeed = maxVelocity;
+
+
+if(proposedXMvt != 0) {
+  if(place_meeting(x+proposedXMvt, y, objSolidFloor)) {
+    while(place_meeting(x+proposedXMvt, y, objSolidFloor)){
+      x -= sign(proposedXMvt);
+      show_debug_message("proposedXMvt &amp; x: " + string(proposedXMvt) + ", " + string(x));
+    }
+  }
+}
+
+var hCollide;
+hCollide = instance_place(x+proposedXMvt, y, objParentFloor);
+if(hCollide != noone) {
+  if(hCollide.wallType == SOLIDFLOOR) {
+    var yplus = 0;
+    while(place_meeting(x+proposedXMvt, y-yplus, objParentFloor) &amp;&amp; yplus &lt;= abs(1*proposedXMvt))
+      yplus += 1;
+    if(place_meeting(x+proposedXMvt, y-yplus,objParentFloor)) {
+      while(!place_meeting(x+sign(proposedXMvt), y, objParentFloor))
+        x += sign(proposedXMvt);
+      proposedXMvt = 0;
+    } else {
+      y -= yplus;
+    }
+  }
+}
+x += proposedXMvt;
+
+
+var vCollide;
+vCollide = instance_place(x, y+vertSpeed, objParentFloor);
+if(vCollide != noone) {
+  if(vCollide.wallType == SOLIDFLOOR) {
+    while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+      y += sign(vertSpeed);
+    vertSpeed = 0;
+    onGround = true;
+  }
+  if ((vCollide.wallType == JUMPTHROUGHFLOOR) &amp;&amp; sign(vertSpeed) == 1) {
+    if(!place_meeting(x,y,objParentFloor)) {
+      while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+        y += 1;
+      vertSpeed = 0;
+      onGround = true;
+    } 
+  }
+} else {
+  onGround = false;
+}
+
+y += vertSpeed;
+
+
+
+/*
+if(place_meeting(x, y + 1, objParentFloor)){
+  if(vertSpeed &gt;= 0){
+    onGround = true;
+    //gravity = 0;
   }
   
   if(keyboard_check_pressed(vk_space)){
-      vspeed = -jumpVelocity;
+      vertSpeed = -jumpVelocity;
       onGround = false;
   }
   
 } else {
-  gravity = baseGravity;
   onGround = false;
 }
+*/
 
-if(vspeed &gt; maxVelocity)
-  vspeed = maxVelocity;
-show_debug_message("Renfield loc: (" + string(x) + ", " + string(y) + "), vspeed: " + string(vspeed));
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objFloor">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-if(vspeed &gt; 0){
-  onGround = true;
-  vspeed = 0;
-}
+/*
+if(!onGround){
+  vertSpeed += baseGravity;
+} else
+  vertSpeed = 0;
+*/
+/*
+if(vertSpeed &gt; maxVelocity)
+  vertSpeed = maxVelocity;
+*/
+strGround = "Not on Ground";
+if(onGround) strGround = "On Ground";
+show_debug_message("2) Renfield loc: (" + string(x) + ", " + string(y) + "), vertSpeed: " + string(vertSpeed) + ", " + strGround);
 </string>
           </argument>
         </arguments>
