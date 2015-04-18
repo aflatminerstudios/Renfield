@@ -1,0 +1,118 @@
+
+StraightJacketRenfield_Test.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+back arm
+  rotate: true
+  xy: 643, 189
+  size: 99, 182
+  orig: 99, 182
+  offset: 0, 0
+  index: -1
+back foot
+  rotate: true
+  xy: 988, 379
+  size: 128, 34
+  orig: 128, 34
+  offset: 0, 0
+  index: -1
+back forearm
+  rotate: false
+  xy: 411, 8
+  size: 155, 72
+  orig: 155, 72
+  offset: 0, 0
+  index: -1
+back jacket arm
+  rotate: false
+  xy: 128, 43
+  size: 95, 464
+  orig: 95, 464
+  offset: 0, 0
+  index: -1
+back shin
+  rotate: true
+  xy: 618, 290
+  size: 45, 247
+  orig: 45, 247
+  offset: 0, 0
+  index: -1
+back thigh
+  rotate: true
+  xy: 432, 171
+  size: 86, 209
+  orig: 86, 209
+  offset: 0, 0
+  index: -1
+front arm
+  rotate: true
+  xy: 225, 19
+  size: 163, 184
+  orig: 163, 184
+  offset: 0, 0
+  index: -1
+front foot
+  rotate: false
+  xy: 643, 146
+  size: 93, 41
+  orig: 93, 41
+  offset: 0, 0
+  index: -1
+front forearm
+  rotate: false
+  xy: 411, 82
+  size: 210, 87
+  orig: 210, 87
+  offset: 0, 0
+  index: -1
+front jacket arm
+  rotate: false
+  xy: 2, 28
+  size: 124, 479
+  orig: 124, 479
+  offset: 0, 0
+  index: -1
+front shin
+  rotate: true
+  xy: 618, 337
+  size: 170, 253
+  orig: 170, 253
+  offset: 0, 0
+  index: -1
+front thigh
+  rotate: false
+  xy: 873, 338
+  size: 113, 169
+  orig: 113, 169
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 827, 170
+  size: 119, 118
+  orig: 119, 118
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 432, 259
+  size: 184, 248
+  orig: 184, 248
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 2, 2
+  size: 41, 24
+  orig: 41, 24
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 225, 184
+  size: 205, 323
+  orig: 205, 323
+  offset: 0, 0
+  index: -1

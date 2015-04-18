@@ -11,10 +11,13 @@
     <sprites name="Weapons">
       <sprite>sprites\sprFrog</sprite>
       <sprite>sprites\sprShot</sprite>
+      <sprite>sprites\sprWeb</sprite>
       <sprite>sprites\sprFly</sprite>
+      <sprite>sprites\sprSpider</sprite>
     </sprites>
     <sprite>sprites\sprSun</sprite>
     <sprite>sprites\sprMoon</sprite>
+    <sprite>sprites\sprSpineTest</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -30,9 +33,11 @@
     <scripts name="Weapons">
       <script>scripts\scrEat.gml</script>
       <script>scripts\scrFrogShoot.gml</script>
+      <script>scripts\scrSpiderShoot.gml</script>
       <script>scripts\scrPlaceFly.gml</script>
       <script>scripts\scrFlyToss.gml</script>
       <script>scripts\scrPlace.gml</script>
+      <script>scripts\scrFreeze.gml</script>
     </scripts>
     <script>scripts\scrHoldObject.gml</script>
   </scripts>
@@ -40,6 +45,7 @@
     <objects name="Weapons">
       <object>objects\objFly</object>
       <object>objects\objShot</object>
+      <object>objects\objWeb</object>
       <object>objects\objWeapon</object>
       <object>objects\objFrog</object>
       <object>objects\objWeaponHeld</object>
@@ -48,6 +54,9 @@
       <object>objects\objFlyHeld</object>
       <object>objects\objFrogPlaced</object>
       <object>objects\objFlyPlaced</object>
+      <object>objects\objSpiderHeld</object>
+      <object>objects\objSpiderPlaced</object>
+      <object>objects\objSpider</object>
     </objects>
     <object>objects\objTestControl</object>
     <objects name="Enemies">
@@ -58,10 +67,13 @@
     <object>objects\objMoon</object>
     <object>objects\objSun</object>
     <object>objects\objDayNightController</object>
+    <object>objects\objST</object>
+    <object>objects\objNewTest</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmWeaponTest</room>
     <room>rooms\roomEnemyTest</room>
+    <room>rooms\rmSpineTest</room>
   </rooms>
   <constants number="3">
     <constant name="GRAVITY">0.3</constant>
