@@ -26,6 +26,7 @@
     <script>scripts\scrDamage.gml</script>
     <scripts name="Enemies">
       <script>scripts\scrEnemyAttack.gml</script>
+      <script>scripts\scrCreateWave.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\scrEat.gml</script>
