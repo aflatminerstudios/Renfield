@@ -40,6 +40,8 @@ attack = scrEnemyAttack;
 takeDamage = scrNull;
 path_start(path, 0, 0, 1);
 
+image_speed = 0;
+image_index = 1;
 </string>
           </argument>
         </arguments>
