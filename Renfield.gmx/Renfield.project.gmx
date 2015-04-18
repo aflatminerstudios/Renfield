@@ -9,6 +9,8 @@
     <sprite>sprites\sprFrog</sprite>
     <sprite>sprites\sprFly</sprite>
     <sprite>sprites\sprShot</sprite>
+    <sprite>sprites\sprEnemy</sprite>
+    <sprite>sprites\sprCoffin</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
