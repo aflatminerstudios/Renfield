@@ -51,7 +51,7 @@ randomize();
           <argument>
             <kind>1</kind>
             <string>with (objWeapon) {
-    placed = !placed;
+    script_execute(placeScript);
 }
 </string>
           </argument>

@@ -39,13 +39,56 @@ tarX = x;
 tarY = y;
 
 placed = false;
+held = false;
 
 //scripts
-autoAttack = scrNull();
-playerAttack = scrNull();
+autoAttack = scrNull;
+playerAttack = scrNull;
+placeScript = scrPlaceFly;
 
 //For this object only
 damage = 1;
+
+borderWidth = sprite_width;
+borderHeight = 30;
+
+borderLeft = x - borderWidth;
+borderRight = x + borderWidth;
+borderTop = y - borderHeight;
+borderBottom = y + borderHeight;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Move random left and right
+
+if ((abs(x - tarX) &lt;= 3) &amp;&amp; (abs(y - tarY) &lt;= 3)) {
+    var rX = irandom(borderWidth * 2);
+    var rY = irandom(borderHeight * 2);
+    
+    tarX = borderLeft + rX;
+    tarY = borderTop + rY;
+} else {
+    move_towards_point(tarX, tarY, moveSpeed);
+}
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,8 @@
       <script>scripts\scrEat.gml</script>
       <script>scripts\scrFrogShoot.gml</script>
       <script>scripts\scrFrogHoldShoot.gml</script>
+      <script>scripts\scrPlaceFly.gml</script>
+      <script>scripts\scrPlace.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

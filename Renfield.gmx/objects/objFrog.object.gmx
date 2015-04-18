@@ -35,13 +35,79 @@ xpToLevel = 10;
 givenXp = 5;
 level = 1;
 placed = false;
+held = false;
 tarX = x;
 tarY = y;
 
 //scripts
 autoAttack = scrFrogShoot;
 playerAttack = scrFrogHoldShoot;
+placeScript = scrPlace;
 
+
+//Specific variables
+jumping = false;
+dir = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set alarm for jumping
+
+if (alarm[3] &lt;= 0) {
+    var r = irandom(10);
+    alarm[3] = room_speed * r;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Start jumping
+
+var dir = irandom(2);
+
+if (dir == 0) {
+    dir--;
+}
+
+jumping = true;
+tarX = x + sprite_width * 2 * dir;
 </string>
           </argument>
         </arguments>
@@ -116,6 +182,61 @@ if (r % 2 == 0) {
 with (shot) {
     move_towards_point(x + (100 * mult), y, speed); 
     damage = 2;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Call parent event
+
+event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Jump
+
+if (jumping) {
+    if (abs(x - tarX) &lt;= 4) {
+        jumping = false;
+        speed = 0;
+    } else {
+        move_towards_point(tarX, y, moveSpeed);
+    }
 }
 </string>
           </argument>
