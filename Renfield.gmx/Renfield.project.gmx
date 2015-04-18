@@ -61,6 +61,7 @@
     <object>objects\objSun</object>
     <object>objects\objDayNightController</object>
     <object>objects\objWave</object>
+    <object>objects\objWaveController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomEnemyTest</room>
