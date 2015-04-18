@@ -13,7 +13,9 @@
     <sprite>sprites\sprCoffin</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pathRoomEnemyTest</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scrNull.gml</script>
     <script>scripts\scrEat.gml</script>
@@ -21,6 +23,9 @@
     <script>scripts\scrFrogShoot.gml</script>
     <script>scripts\scrFrogHoldShoot.gml</script>
     <script>scripts\scrDamageWeapon.gml</script>
+    <scripts name="Enemies">
+      <script>scripts\scrEnemyAttack.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\objWeapon</object>
@@ -28,9 +33,15 @@
     <object>objects\objFly</object>
     <object>objects\objTestControl</object>
     <object>objects\objShot</object>
+    <objects name="Enemies">
+      <object>objects\objEnemy</object>
+      <object>objects\objTorcher</object>
+    </objects>
+    <object>objects\objCoffin</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmWeaponTest</room>
+    <room>rooms\roomEnemyTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
