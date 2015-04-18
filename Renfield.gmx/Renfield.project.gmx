@@ -46,7 +46,7 @@
     <scripts name="Enemies">
       <script>scripts\scrSpawnEnemy.gml</script>
       <script>scripts\scrEnemyAttack.gml</script>
-      <script>scripts\scrCreateWave.gml</script>
+      <script>scripts\scrCreateSpawner.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\scrEat.gml</script>
@@ -90,7 +90,7 @@
     <object>objects\objDayNightController</object>
     <object>objects\objST</object>
     <object>objects\objNewTest</object>
-    <object>objects\objWave</object>
+    <object>objects\objSpawner</object>
     <object>objects\objWaveController</object>
     <objects name="WaveControllers">
       <object>objects\objLevel1Controller</object>

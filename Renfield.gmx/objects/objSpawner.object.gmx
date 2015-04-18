@@ -31,8 +31,6 @@ timer = 0;
 enemyIndex = 0;
 path = noone;
 enemies = noone;
-
-alarm[2] = 60;
 </string>
           </argument>
         </arguments>
@@ -86,8 +84,9 @@ if (enemyIndex &lt; array_length_1d(enemies))
     enemy = scrSpawnEnemy(enemies[enemyIndex], path);
     enemyIndex += 1;
     alarm[2] = timer;
+} else {
+    alarm[0] = 1;
 }
-
 
 </string>
           </argument>
