@@ -29,8 +29,10 @@
       <script>scripts\scrEat.gml</script>
       <script>scripts\scrFrogShoot.gml</script>
       <script>scripts\scrPlaceFly.gml</script>
+      <script>scripts\scrFlyToss.gml</script>
       <script>scripts\scrPlace.gml</script>
     </scripts>
+    <script>scripts\scrHoldObject.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Weapons">
@@ -56,6 +58,9 @@
     <room>rooms\rmWeaponTest</room>
     <room>rooms\roomEnemyTest</room>
   </rooms>
+  <constants number="1">
+    <constant name="GRAVITY">0.3</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

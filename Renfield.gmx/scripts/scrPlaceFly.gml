@@ -9,4 +9,5 @@ with (object) {
     borderRight = x + borderWidth;
     borderTop = y - borderHeight;
     borderBottom = y + borderHeight;
+    tarX = x;
 }

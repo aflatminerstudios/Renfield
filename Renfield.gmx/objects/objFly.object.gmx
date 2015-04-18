@@ -42,7 +42,7 @@ held = false;
 
 //scripts
 autoAttack = scrNull;
-playerAttack = scrNull;
+playerAttack = scrFlyToss;
 placeScript = scrPlaceFly;
 
 //objects
@@ -60,6 +60,8 @@ borderLeft = x - borderWidth;
 borderRight = x + borderWidth;
 borderTop = y - borderHeight;
 borderBottom = y + borderHeight;
+
+released = false;
 </string>
           </argument>
         </arguments>
