@@ -41,6 +41,7 @@ wave3Path = pathLevel1C;
 wave1 = scrCreateWave(objBatteringRam, 5, 1, 2, wave1Path);
 wave2 = scrCreateWave(objPitchforker, 7, 1, 3, wave2Path);
 wave3 = scrCreateWave(objPeasant, 11, 1, 2, wave3Path);
+wave4 = scrCreateWave(objHelsing, 2, 100, 5, wave3Path);
 </string>
           </argument>
         </arguments>

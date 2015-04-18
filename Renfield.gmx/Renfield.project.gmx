@@ -68,6 +68,7 @@
       <object>objects\objPeasant</object>
       <object>objects\objPitchforker</object>
       <object>objects\objBatteringRam</object>
+      <object>objects\objHelsing</object>
     </objects>
     <object>objects\objCoffin</object>
     <object>objects\objMoon</object>
