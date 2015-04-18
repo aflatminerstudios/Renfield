@@ -67,7 +67,10 @@ image_index = 2;
 
 if (walking)
 {
-    path_speed = (moveSpeed * facing);
+    if (path != noone)
+    {
+        path_speed = (moveSpeed * facing);
+    }
 }
 else
 {
