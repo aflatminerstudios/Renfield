@@ -53,6 +53,7 @@
   <instances>
     <instance objName="objCoffin" x="992" y="704" name="inst_6EF59B78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLevel1Controller" x="0" y="0" name="inst_485964DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDayNightController" x="480" y="736" name="inst_701F563F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
