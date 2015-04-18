@@ -67,6 +67,7 @@
       <object>objects\objEnemy</object>
       <object>objects\objPeasant</object>
       <object>objects\objPitchforker</object>
+      <object>objects\objBatteringRam</object>
     </objects>
     <object>objects\objCoffin</object>
     <object>objects\objMoon</object>

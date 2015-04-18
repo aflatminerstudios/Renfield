@@ -38,9 +38,9 @@ wave2Path = pathLevel1B;
 path_append(pathLevel1C, pathLevel1D);
 wave3Path = pathLevel1C;
 
-wave1 = scrCreateWave(objPeasant, 3, 2, wave1Path);
-wave2 = scrCreateWave(objPitchforker, 2, 3, wave2Path);
-wave3 = scrCreateWave(objPeasant, 3, 2, wave3Path);
+wave1 = scrCreateWave(objBatteringRam, 10, 2, wave1Path);
+wave2 = scrCreateWave(objPitchforker, 15, 3, wave2Path);
+wave3 = scrCreateWave(objPeasant, 20, 2, wave3Path);
 </string>
           </argument>
         </arguments>
