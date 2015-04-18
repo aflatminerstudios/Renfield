@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>/// Initialization
 
-spawnPointX = 0;
-spawnPointY = 0;
+spawnPointX = x;
+spawnPointY = y;
 
 timer = 0;
 enemyIndex = 0;
