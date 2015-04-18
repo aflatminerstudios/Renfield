@@ -1,8 +1,12 @@
-///scrPlaceFly()
+///scrPlaceFly(object)
 
-placed = !placed
+var object = argument0;
 
-borderLeft = x - borderWidth;
-borderRight = x + borderWidth;
-borderTop = y - borderHeight;
-borderBottom = y + borderHeight;
+scrPlace(object);
+
+with (object) {
+    borderLeft = x - borderWidth;
+    borderRight = x + borderWidth;
+    borderTop = y - borderHeight;
+    borderBottom = y + borderHeight;
+}

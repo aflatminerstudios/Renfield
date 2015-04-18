@@ -28,7 +28,6 @@
     <scripts name="Weapons">
       <script>scripts\scrEat.gml</script>
       <script>scripts\scrFrogShoot.gml</script>
-      <script>scripts\scrFrogHoldShoot.gml</script>
       <script>scripts\scrPlaceFly.gml</script>
       <script>scripts\scrPlace.gml</script>
     </scripts>
@@ -39,6 +38,12 @@
       <object>objects\objShot</object>
       <object>objects\objWeapon</object>
       <object>objects\objFrog</object>
+      <object>objects\objWeaponHeld</object>
+      <object>objects\objWeaponPlaced</object>
+      <object>objects\objFrogHeld</object>
+      <object>objects\objFlyHeld</object>
+      <object>objects\objFrogPlaced</object>
+      <object>objects\objFlyPlaced</object>
     </objects>
     <object>objects\objTestControl</object>
     <objects name="Enemies">

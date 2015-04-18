@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>objWeapon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,78 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Setup Default values
-
-moveSpeed = 0;
-hp = 1;
-
-xp = 0;
-xpToLevel = 0;
-givenXp = 0;
-level = 1;
-
-
-tarX = x;
-tarY = y;
-
-canEat[0] = 0;
-
-//scripts
-autoAttack = scrNull;
-playerAttack = scrNull;
-placeScript = scrNull;
-
+            <string>
 //Other objects
-held = objWeaponHeld;
 base = objWeapon;
-placed = objWeaponPlaced;
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="11">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Move random left and right
-
-if ((abs(x - tarX) &lt;= 10) &amp;&amp; (abs(y - tarY) &lt;= 10)) {
-    tarX = irandom(room_width);
-    tarY = irandom(room_height);
-} else {
-    move_towards_point(tarX, tarY, moveSpeed);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>0</libid>
-        <id>0</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="2" enumb="0">
@@ -116,7 +50,7 @@ if ((abs(x - tarX) &lt;= 10) &amp;&amp; (abs(y - tarY) &lt;= 10)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy object
+            <string>///Destroy instance
 
 instance_destroy();
 </string>
@@ -141,39 +75,7 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Move
-
-
-//Set alarm for move
-if (alarm[11] &lt;= 0) {
-    alarm[11] = 1;
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objWeapon">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Call eat script
-
-scrEat(self.id, other.id);
+            <string>///Prevent weapon step from being called
 </string>
           </argument>
         </arguments>

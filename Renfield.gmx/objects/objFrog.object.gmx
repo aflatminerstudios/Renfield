@@ -41,13 +41,18 @@ tarY = y;
 
 //scripts
 autoAttack = scrFrogShoot;
-playerAttack = scrFrogHoldShoot;
+playerAttack = scrFrogShoot;
 placeScript = scrPlace;
 
+//objects
+placed = objFrogPlaced;
+held = objFrogHeld;
+base = objFrog;
 
 //Specific variables
 jumping = false;
 dir = 1;
+
 </string>
           </argument>
         </arguments>
