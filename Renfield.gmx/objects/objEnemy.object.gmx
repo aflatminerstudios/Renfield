@@ -38,7 +38,7 @@ walking = true;
 path = pathRoomEnemyTest;
 attack = scrEnemyAttack;
 takeDamage = scrNull;
-path_start(path, 0, 0, 0);
+path_start(path, 0, 0, 1);
 
 </string>
           </argument>
