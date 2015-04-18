@@ -58,10 +58,11 @@
     <object>objects\objMoon</object>
     <object>objects\objSun</object>
     <object>objects\objDayNightController</object>
+    <object>objects\objWave</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmWeaponTest</room>
     <room>rooms\roomEnemyTest</room>
+    <room>rooms\rmWeaponTest</room>
   </rooms>
   <constants number="3">
     <constant name="GRAVITY">0.3</constant>
