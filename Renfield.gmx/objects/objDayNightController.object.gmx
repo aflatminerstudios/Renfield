@@ -25,8 +25,68 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>moonDistance = 100;
-sunDistance = 100;
+            <string>///Setup
+
+cycle = DAY;
+
+moonDistance = 300;
+sunDistance = -300;
+
+sun = instance_create(x, y + sunDistance, objSun);
+moon = instance_create(x, y + moonDistance, objMoon);
+
+rotation = 0;
+rotSpeed = 0.5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Rotate sun and moon
+
+rotation += rotSpeed;
+
+sun.x = x + sunDistance * cos(rotation * pi / 180);
+sun.y = y + sunDistance * sin(rotation * pi / 180);
+
+
+moon.x = x + moonDistance * cos(rotation * pi / 180);
+moon.y = y + moonDistance * sin(rotation * pi / 180);
+
+
+if (rotation == 360) {
+    rotation = 0;
+}
+
+
+if (cycle == DAY) {
+    if (rotation &gt; 180) {
+        cycle = NIGHT;
+        background_colour = c_maroon;
+    }
+} else {
+    if (rotation &lt; 180) {
+        cycle = DAY;
+        background_color = c_blue;
+    }
+}
 </string>
           </argument>
         </arguments>

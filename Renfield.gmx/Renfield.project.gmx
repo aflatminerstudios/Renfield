@@ -63,8 +63,10 @@
     <room>rooms\rmWeaponTest</room>
     <room>rooms\roomEnemyTest</room>
   </rooms>
-  <constants number="1">
+  <constants number="3">
     <constant name="GRAVITY">0.3</constant>
+    <constant name="DAY">0</constant>
+    <constant name="NIGHT">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
