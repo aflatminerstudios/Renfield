@@ -37,8 +37,8 @@ if (r % 2 == 0) {
 }
 
 with (shot) {
-    move_towards_point(x + (100 * mult), y, speed); 
-    damage = 2;
+    move_towards_point(x + (150 * mult), y, speed); 
+    damage = 1 * other.level;
     alarm[0] *= 2;
 }
 </string>

@@ -38,7 +38,7 @@ if (r % 2 == 0) {
 
 with (shot) {
     move_towards_point(x + (100 * mult), y, speed); 
-    damage = 2;
+    damage = 2 * other.level;
 }
 </string>
           </argument>

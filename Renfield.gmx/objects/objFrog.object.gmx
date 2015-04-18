@@ -28,12 +28,12 @@
             <string>///Setup Default values
 
 moveSpeed = room_speed / 12;
-hp = 10;
 canEat[0] = objFly;
 xp = 0;
 xpToLevel = 10;
 givenXp = 5;
 level = 1;
+hp = 9 + level;
 placed = false;
 held = false;
 tarX = x;

@@ -28,13 +28,12 @@
             <string>///Setup Default values
 
 moveSpeed = room_speed / 30;
-hp = 5;
 canEat[0] = 0;
 xp = 0;
 xpToLevel = 10;
 givenXp = 2;
 level = 1;
-
+hp = 4 + level;
 tarX = x;
 tarY = y;
 
