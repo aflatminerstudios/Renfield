@@ -65,7 +65,7 @@
     <object>objects\objTestControl</object>
     <objects name="Enemies">
       <object>objects\objEnemy</object>
-      <object>objects\objTorcher</object>
+      <object>objects\objPeasant</object>
       <object>objects\objPitchforker</object>
     </objects>
     <object>objects\objCoffin</object>
