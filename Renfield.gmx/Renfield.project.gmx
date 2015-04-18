@@ -54,6 +54,7 @@
     <objects name="Enemies">
       <object>objects\objEnemy</object>
       <object>objects\objTorcher</object>
+      <object>objects\objPitchforker</object>
     </objects>
     <object>objects\objCoffin</object>
     <object>objects\objMoon</object>
