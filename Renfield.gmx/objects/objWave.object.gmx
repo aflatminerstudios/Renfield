@@ -27,13 +27,12 @@
             <kind>1</kind>
             <string>/// Initialization
 
-spawnPointX = x;
-spawnPointY = y;
-
 timer = 0;
 enemyIndex = 0;
+path = noone;
+enemies = noone;
 
-alarm[2] = 1;
+alarm[2] = 60;
 </string>
           </argument>
         </arguments>
@@ -56,7 +55,8 @@ alarm[2] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[1] = 1;
+            <string>/// Reset alarm
+alarm[1] = 1;
 </string>
           </argument>
         </arguments>
@@ -83,7 +83,7 @@ alarm[2] = 1;
 
 if (enemyIndex &lt; array_length_1d(enemies))
 {
-    instance_create(spawnPointX, spawnPointY, enemies[enemyIndex]);
+    enemy = scrSpawnEnemy(enemies[enemyIndex], path);
     enemyIndex += 1;
     alarm[2] = timer;
 }

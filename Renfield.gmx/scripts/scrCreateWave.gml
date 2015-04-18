@@ -12,5 +12,5 @@ for(i = 0; i < count; i++)
     wave.enemies[i] = enemy;
 }
 wave.timer = room_speed * timer;
-
+wave.path = path;
 return wave;
