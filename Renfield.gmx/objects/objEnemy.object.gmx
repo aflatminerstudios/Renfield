@@ -35,11 +35,12 @@ moveSpeed = room_speed / 60;
 baseSpeed = moveSpeed;
 walking = true;
 
-path = pathRoomEnemyTest;
+path = noone;
 attack = scrEnemyAttack;
 takeDamage = scrNull;
-path_start(path, 0, 0, 1);
 
+image_speed = 0;
+image_index = 0;
 </string>
           </argument>
         </arguments>
