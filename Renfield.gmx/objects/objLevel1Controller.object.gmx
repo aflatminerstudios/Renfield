@@ -54,6 +54,8 @@ spawnBPath = pathLevel1B;
 path_append(pathLevel1C, pathLevel1D);
 spawnCPath = pathLevel1C;
 
+music = audio_play_sound(sndGameplayMusic, 1, true);
+
 /*
 waveLength
 waveDelay
