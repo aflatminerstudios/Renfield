@@ -36,10 +36,10 @@ sun = instance_create(x, y + sunDistance, objSun);
 moon = instance_create(x, y + moonDistance, objMoon);
 
 rotation = 0;
-rotSpeed = 0.5;
 
-daySpeed = 0.5;
+daySpeed = 0.1;
 nightSpeed = 0.5;
+rotSpeed = daySpeed;
 </string>
           </argument>
         </arguments>

@@ -12,17 +12,19 @@
       <sprite>sprites\sprShot</sprite>
       <sprite>sprites\sprWeb</sprite>
       <sprite>sprites\sprFly</sprite>
+      <sprite>sprites\sprCat</sprite>
       <sprite>sprites\sprSpider</sprite>
+      <sprite>sprites\sprBat</sprite>
     </sprites>
     <sprite>sprites\sprSun</sprite>
     <sprite>sprites\sprMoon</sprite>
-    <sprite>sprites\sprSpineTest</sprite>
     <sprites name="Enemies">
       <sprite>sprites\sprPeasant</sprite>
       <sprite>sprites\sprPitchfork</sprite>
       <sprite>sprites\sprBatteringRam</sprite>
       <sprite>sprites\sprHelsing</sprite>
     </sprites>
+    <sprite>sprites\sprSoundWaves</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -50,9 +52,12 @@
       <script>scripts\scrPlaceFly.gml</script>
       <script>scripts\scrFlyToss.gml</script>
       <script>scripts\scrPlace.gml</script>
+      <script>scripts\scrFrogShootHeld.gml</script>
+      <script>scripts\scrBatScreech.gml</script>
       <script>scripts\scrFreeze.gml</script>
     </scripts>
     <script>scripts\scrHoldObject.gml</script>
+    <script>scripts\scrSpiderShootHeld.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Weapons">
@@ -64,12 +69,16 @@
       <object>objects\objWeaponHeld</object>
       <object>objects\objWeaponPlaced</object>
       <object>objects\objFrogHeld</object>
-      <object>objects\objFlyHeld</object>
       <object>objects\objFrogPlaced</object>
+      <object>objects\objFlyHeld</object>
       <object>objects\objFlyPlaced</object>
       <object>objects\objSpiderHeld</object>
       <object>objects\objSpiderPlaced</object>
       <object>objects\objSpider</object>
+      <object>objects\objBatPlaced</object>
+      <object>objects\objBatHeld</object>
+      <object>objects\objBat</object>
+      <object>objects\objSoundWave</object>
     </objects>
     <object>objects\objTestControl</object>
     <objects name="Enemies">
@@ -83,8 +92,6 @@
     <object>objects\objMoon</object>
     <object>objects\objSun</object>
     <object>objects\objDayNightController</object>
-    <object>objects\objST</object>
-    <object>objects\objNewTest</object>
     <object>objects\objWave</object>
     <object>objects\objWaveController</object>
     <objects name="WaveControllers">
@@ -92,9 +99,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmLevel1</room>
     <room>rooms\rmWeaponTest</room>
-    <room>rooms\rmSpineTest</room>
+    <room>rooms\rmLevel1</room>
   </rooms>
   <constants number="3">
     <constant name="GRAVITY">0.3</constant>

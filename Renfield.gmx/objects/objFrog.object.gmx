@@ -29,6 +29,9 @@
 
 moveSpeed = room_speed / 12;
 canEat[0] = objFly;
+canEat[1] = objFlyPlaced;
+canEat[2] = objSpider;
+canEat[3] = objSpiderPlaced;
 xp = 0;
 xpToLevel = 10;
 givenXp = 5;
@@ -41,7 +44,7 @@ tarY = y;
 
 //scripts
 autoAttack = scrFrogShoot;
-playerAttack = scrFrogShoot;
+playerAttack = scrFrogShootHeld;
 placeScript = scrPlace;
 
 //objects
@@ -52,7 +55,7 @@ base = objFrog;
 //Specific variables
 jumping = false;
 dir = 1;
-
+shot = false;
 </string>
           </argument>
         </arguments>
