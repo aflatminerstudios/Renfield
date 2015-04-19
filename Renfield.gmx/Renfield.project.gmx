@@ -120,9 +120,8 @@
     <object>objects\objLadder</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\roomTestMicha</room>
-    <room>rooms\rmWeaponTest</room>
     <room>rooms\rmLevel1</room>
+    <room>rooms\roomTestMicha</room>
     <room>rooms\rmTitle</room>
     <room>rooms\rmGameOver</room>
   </rooms>
