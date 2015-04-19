@@ -37,6 +37,7 @@ xpToLevel = 10;
 givenXp = 5;
 level = 1;
 hp = 9 + level;
+armor = 1.0;
 tarX = x;
 tarY = y;
 

@@ -28,6 +28,7 @@
             <string>/// Initialization
 
 hp = 100;
+armor = 1.0;
 strength = 25;
 
 facing = 1;

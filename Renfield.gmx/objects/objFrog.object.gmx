@@ -38,6 +38,7 @@ xpToLevel = 10;
 givenXp = 5;
 level = 1;
 hp = 9 + level;
+armor = 1.0;
 placed = false;
 held = false;
 tarX = x;

@@ -29,6 +29,7 @@
 
 moveSpeed = 0;
 hp = 1;
+armor = 1.0;
 
 xp = 0;
 xpToLevel = 0;
