@@ -81,6 +81,7 @@
     <script>scripts\scrSpeedFromDuration.gml</script>
     <script>scripts\scrDrawHealthBar.gml</script>
     <script>scripts\scrRenfieldEat.gml</script>
+    <script>scripts\scrAddLeadingZeros.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objRenfield</object>

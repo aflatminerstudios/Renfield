@@ -104,7 +104,10 @@ numPlaced = instance_number(objWeaponPlaced);
 
 draw_set_color(c_black);
 
-draw_text(150, 150, "This is a test of a lot of stuff!!!!");
+draw_text(10, 20, "Score: " + string(scrAddLeadingZeros(score, 6)));
+draw_text(200, 20, "Current Turrets: " + string(numPlaced));
+draw_text(10, 50, "Enemies Killed: " + string(numKilled));
+draw_text(200, 50, "Total Turrets Placed: " + string(totalPlaced));
 
 </string>
           </argument>
