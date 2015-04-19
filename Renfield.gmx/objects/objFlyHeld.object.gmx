@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///Fly if released
+
 if (released) {
     baseGravity = GRAVITY;
     speed = 17 * facing;

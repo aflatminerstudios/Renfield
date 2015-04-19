@@ -42,7 +42,7 @@ tarY = y;
 
 //scripts
 autoAttack = scrBatScreech;
-playerAttack = scrNull;
+playerAttack = scrBatToss;
 placeScript = scrPlaceBat;
 
 //objects
@@ -57,7 +57,7 @@ maxWaves = 5;
 delay = 5;
 moveDist = sprite_width * 4;
 flyDist = 35;
-
+released = false;
 
 //For ground movement
 baseGravity = GRAVITY;
@@ -156,6 +156,9 @@ if (abs(x - tarX) &lt;= 10) {
             <string>///Call parent event
 
 event_inherited();
+
+
+
 </string>
           </argument>
         </arguments>
