@@ -80,6 +80,7 @@
     <script>scripts\scrHoldObject.gml</script>
     <script>scripts\scrSpeedFromDuration.gml</script>
     <script>scripts\scrDrawHealthBar.gml</script>
+    <script>scripts\scrRenfieldEat.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objRenfield</object>
@@ -136,6 +137,7 @@
     <object>objects\objLadder</object>
     <object>objects\objRenfieldTest</object>
     <object>objects\objSpineAssister</object>
+    <object>objects\objScoreControl</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSurfaceSetup</room>

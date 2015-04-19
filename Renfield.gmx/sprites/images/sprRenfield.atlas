@@ -1,48 +1,76 @@
 
-DALIRenfieldTest303.png
-size: 1024,1024
+DALIRenfieldTest127.png
+size: 256,128
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 arm
   rotate: false
-  xy: 394, 620
-  size: 350, 244
-  orig: 350, 244
+  xy: 82, 35
+  size: 70, 49
+  orig: 70, 49
+  offset: 0, 0
+  index: -1
+back hand
+  rotate: false
+  xy: 154, 35
+  size: 15, 11
+  orig: 15, 11
+  offset: 0, 0
+  index: -1
+forearm
+  rotate: false
+  xy: 154, 48
+  size: 51, 30
+  orig: 51, 30
+  offset: 0, 0
+  index: -1
+forearmBack
+  rotate: true
+  xy: 207, 45
+  size: 33, 29
+  orig: 33, 29
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 230, 108
+  size: 19, 14
+  orig: 19, 14
   offset: 0, 0
   index: -1
 head
   rotate: true
-  xy: 394, 410
-  size: 208, 295
-  orig: 208, 295
+  xy: 169, 80
+  size: 42, 59
+  orig: 42, 59
   offset: 0, 0
   index: -1
 left leg
-  rotate: false
-  xy: 2, 15
-  size: 180, 426
-  orig: 180, 426
+  rotate: true
+  xy: 82, 86
+  size: 36, 85
+  orig: 36, 85
   offset: 0, 0
   index: -1
 rear arm
   rotate: true
-  xy: 746, 694
-  size: 170, 254
-  orig: 170, 254
+  xy: 2, 2
+  size: 34, 51
+  orig: 34, 51
   offset: 0, 0
   index: -1
 right leg
-  rotate: false
-  xy: 184, 2
-  size: 117, 439
-  orig: 117, 439
+  rotate: true
+  xy: 55, 10
+  size: 23, 88
+  orig: 23, 88
   offset: 0, 0
   index: -1
 torso
   rotate: false
-  xy: 2, 443
-  size: 390, 421
-  orig: 390, 421
+  xy: 2, 38
+  size: 78, 84
+  orig: 78, 84
   offset: 0, 0
   index: -1

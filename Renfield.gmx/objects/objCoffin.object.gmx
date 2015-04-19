@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialization
-
-baseHp = 100;
-hp = baseHp;
-</string>
+			baseHp = 100;
+			hp = baseHp;
+			armor = 1.0;
+			</string>
           </argument>
         </arguments>
       </action>

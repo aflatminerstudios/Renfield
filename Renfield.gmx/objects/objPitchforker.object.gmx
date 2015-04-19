@@ -28,6 +28,7 @@
             <string>/// Initialization
 
 hp = 5;
+armor = 1.0;
 strength = 2;
 
 facing = 1;
@@ -38,6 +39,8 @@ walking = true;
 path = noone;
 attack = scrEnemyAttack;
 takeDamage = scrNull;
+
+points = 150;
 
 image_speed = 0;
 </string>
