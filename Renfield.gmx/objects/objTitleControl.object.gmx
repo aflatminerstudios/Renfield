@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="9" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,10 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message(skeleton_animation_get());
-show_debug_message("Creating spine object");
-show_debug_message(skeleton_animation_get());
-
+            <string>room_goto(roomTestMicha);
 </string>
           </argument>
         </arguments>

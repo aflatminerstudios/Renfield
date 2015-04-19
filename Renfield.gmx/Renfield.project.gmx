@@ -30,6 +30,7 @@
       <sprite>sprites\sprJumpThroughFloor</sprite>
       <sprite>sprites\sprSolidWall</sprite>
     </sprites>
+    <sprite>sprites\sprLadder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -115,11 +116,14 @@
       <object>objects\objRenfield</object>
       <object>objects\objSolidFloor</object>
     </objects>
+    <object>objects\objTitleControl</object>
+    <object>objects\objLadder</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomTestMicha</room>
-    <room>rooms\rmLevel1</room>
     <room>rooms\rmWeaponTest</room>
+    <room>rooms\rmLevel1</room>
+    <room>rooms\rmTitle</room>
   </rooms>
   <constants number="5">
     <constant name="GRAVITY">0.3</constant>

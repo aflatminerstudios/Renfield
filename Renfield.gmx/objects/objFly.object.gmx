@@ -62,6 +62,18 @@ borderTop = y - borderHeight;
 borderBottom = y + borderHeight;
 
 released = false;
+
+
+//Animation
+//animations: "Moving" "Stationary"
+
+skeleton_animation_set("Moving");
+
+
+image_speed = 1;
+image_xscale = 0.2;
+image_yscale = 0.2;
+
 </string>
           </argument>
         </arguments>
