@@ -92,8 +92,8 @@
     <object>objects\objST</object>
     <object>objects\objNewTest</object>
     <object>objects\objSpawner</object>
-    <object>objects\objWaveController</object>
-    <objects name="WaveControllers">
+    <objects name="LevelControllers">
+      <object>objects\objLevelController</object>
       <object>objects\objLevel1Controller</object>
     </objects>
     <objects name="Blocks">
