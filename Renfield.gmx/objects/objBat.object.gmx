@@ -61,6 +61,10 @@ moveDist = sprite_width * 4;
 baseGravity = GRAVITY;
 maxVelocity = 30;
 vertSpeed = 0;
+
+//Animation
+heldAnimation = "";
+placedAnimation = "";
 </string>
           </argument>
         </arguments>

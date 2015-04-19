@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Setup Default values
 
+facing = 1;
 moveSpeed = room_speed / 30;
 canEat[0] = 0;
 xp = 0;
@@ -68,13 +69,12 @@ released = false;
 //animations: "Moving" "Stationary"
 
 skeleton_animation_set("Moving");
-skeleton_animation_set("Stationary");
-show_debug_message(skeleton_animation_get());
 
 image_speed = 1;
 image_xscale = 0.2;
 image_yscale = 0.2;
-holdAnimation = "Stationary";
+heldAnimation = "Stationary";
+placedAnimation = "Moving";
 </string>
           </argument>
         </arguments>
@@ -97,8 +97,8 @@ holdAnimation = "Stationary";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Move random left and right
-
+            <string>///Move randomly
+/*
 if ((abs(x - tarX) &lt;= 3) &amp;&amp; (abs(y - tarY) &lt;= 3)) {
     var rX = irandom(borderWidth * 2);
     var rY = irandom(borderHeight * 2);
@@ -107,7 +107,9 @@ if ((abs(x - tarX) &lt;= 3) &amp;&amp; (abs(y - tarY) &lt;= 3)) {
     tarY = borderTop + rY;
 } else {
     move_towards_point(tarX, tarY, moveSpeed);
-}
+}*/
+
+
 </string>
           </argument>
         </arguments>

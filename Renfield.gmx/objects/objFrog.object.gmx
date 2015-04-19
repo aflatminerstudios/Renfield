@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Setup Default values
 
+facing = 1;
 moveSpeed = room_speed / 12;
 canEat[0] = objFly;
 canEat[1] = objFlyPlaced;
@@ -61,6 +62,10 @@ shot = false;
 baseGravity = GRAVITY;
 maxVelocity = 30;
 vertSpeed = 0;
+
+//Animation
+heldAnimation = "";
+placedAnimation = "";
 </string>
           </argument>
         </arguments>

@@ -8,5 +8,5 @@ with (object) {
         alarm[i] = -1;
     }
 
-    instance_change(held, false);
+    instance_change(held, true);
 }

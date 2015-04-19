@@ -59,6 +59,10 @@ shot = false;
 baseGravity = GRAVITY;
 maxVelocity = 30;
 vertSpeed = 0;
+
+//Animation
+heldAnimation = "";
+placedAnimation = "";
 </string>
           </argument>
         </arguments>

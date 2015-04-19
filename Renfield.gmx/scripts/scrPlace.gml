@@ -11,7 +11,6 @@ with (object) {
     if (object_index == placed) {
         instance_change(base, false);
     } else {
-        instance_change(placed, false);
+        instance_change(placed, true);
     }
 }
-
