@@ -27,10 +27,10 @@
             <kind>1</kind>
             <string>///Setup
 
-cycle = DAY;
+cycle = NIGHT;
 
-moonDistance = 300;
-sunDistance = -300;
+moonDistance = -300;
+sunDistance = 300;
 
 sun = instance_create(x, y + sunDistance, objSun);
 moon = instance_create(x, y + moonDistance, objMoon);
@@ -74,19 +74,18 @@ moon.x = x + moonDistance * cos(rotation * pi / 180);
 moon.y = y + moonDistance * sin(rotation * pi / 180);
 
 
-if (rotation == 360) {
-    rotation = 0;
+if (rotation &gt;= 360) {
+    rotation = rotation - 360;
 }
 
-
 if (cycle == DAY) {
-    if (rotation &gt; 180) {
+    if (rotation &lt; 180) {
         cycle = NIGHT;
         background_colour = c_maroon;
         rotSpeed = nightSpeed;
     }
 } else {
-    if (rotation &lt; 180) {
+    if (rotation &gt; 180) {
         cycle = DAY;
         background_color = c_blue;
         rotSpeed = daySpeed;
