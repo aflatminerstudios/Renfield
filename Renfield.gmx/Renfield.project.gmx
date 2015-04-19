@@ -120,6 +120,7 @@
     <room>rooms\roomTestMicha</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmWeaponTest</room>
+    <room>rooms\rmGameOver</room>
   </rooms>
   <constants number="5">
     <constant name="GRAVITY">0.3</constant>
