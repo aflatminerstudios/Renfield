@@ -1,0 +1,62 @@
+
+bat.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 0
+  rotate: true
+  xy: 102, 30
+  size: 17, 18
+  orig: 17, 18
+  offset: 0, 0
+  index: -1
+Layer 1
+  rotate: false
+  xy: 70, 68
+  size: 15, 19
+  orig: 15, 19
+  offset: 0, 0
+  index: -1
+Layer 3
+  rotate: true
+  xy: 87, 49
+  size: 72, 36
+  orig: 72, 36
+  offset: 0, 0
+  index: -1
+Layer 3 copy
+  rotate: true
+  xy: 70, 5
+  size: 42, 30
+  orig: 42, 30
+  offset: 0, 0
+  index: -1
+Layer 3 copy 2
+  rotate: true
+  xy: 47, 3
+  size: 84, 21
+  orig: 84, 21
+  offset: 0, 0
+  index: -1
+Layer 3 copy 3
+  rotate: false
+  xy: 2, 50
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+Layer 3 copy 5
+  rotate: false
+  xy: 2, 2
+  size: 43, 45
+  orig: 43, 45
+  offset: 0, 0
+  index: -1
+Layer 3 copy 6
+  rotate: false
+  xy: 2, 89
+  size: 83, 32
+  orig: 83, 32
+  offset: 0, 0
+  index: -1

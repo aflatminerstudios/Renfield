@@ -43,7 +43,7 @@ tarY = y;
 //scripts
 autoAttack = scrBatScreech;
 playerAttack = scrNull;
-placeScript = scrPlace;
+placeScript = scrPlaceBat;
 
 //objects
 base = objBat;
@@ -56,6 +56,8 @@ waveCount = 0;
 maxWaves = 5;
 delay = 5;
 moveDist = sprite_width * 4;
+flyDist = 35;
+
 
 //For ground movement
 baseGravity = GRAVITY;
@@ -63,8 +65,13 @@ maxVelocity = 30;
 vertSpeed = 0;
 
 //Animation
+///Animations are:
+
 heldAnimation = "";
 placedAnimation = "";
+scale = 0.2;
+image_xscale = scale;
+image_yscale = scale;
 </string>
           </argument>
         </arguments>
@@ -179,17 +186,17 @@ if(vertSpeed &gt; maxVelocity)
 
 
 var vCollide;
-vCollide = instance_place(x, y+vertSpeed, objParentFloor);
+vCollide = instance_place(x, y+vertSpeed + flyDist, objParentFloor);
 if(vCollide != noone) {
   if(vCollide.wallType == SOLIDFLOOR) {
-    while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+    while(!place_meeting(x,y+sign(vertSpeed) + flyDist,objParentFloor))
       y += sign(vertSpeed);
     vertSpeed = 0;
     onGround = true;
   }
   if ((vCollide.wallType == JUMPTHROUGHFLOOR) &amp;&amp; sign(vertSpeed) == 1) {
-    if(!place_meeting(x,y,objParentFloor)) {
-      while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+    if(!place_meeting(x,y + flyDist,objParentFloor)) {
+      while(!place_meeting(x,y+sign(vertSpeed) + flyDist,objParentFloor))
         y += 1;
       vertSpeed = 0;
       onGround = true;
@@ -200,6 +207,28 @@ if(vCollide != noone) {
 }
 
 y += vertSpeed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change facing
+image_xscale = scale * facing;
 </string>
           </argument>
         </arguments>

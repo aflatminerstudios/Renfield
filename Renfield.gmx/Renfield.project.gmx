@@ -71,6 +71,7 @@
       <script>scripts\scrConvertWeaponToHeld.gml</script>
       <script>scripts\scrSpiderShootHeld.gml</script>
       <script>scripts\scrFrogShootHeld.gml</script>
+      <script>scripts\scrPlaceBat.gml</script>
       <script>scripts\scrPlaceCat.gml</script>
       <script>scripts\scrBatScreech.gml</script>
       <script>scripts\scrFreeze.gml</script>

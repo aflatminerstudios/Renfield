@@ -5,8 +5,7 @@ var damage = argument1;
 
 with (instance) {
     hp -= damage;
-    if (hp < 0) {
+    if (hp <= 0) {
         alarm[0] = 1;
-    }
+    }   
 }
-

@@ -205,7 +205,7 @@ if(actionPressed){
   }
 } else if(holdingWeapon &amp;&amp; downPressed) {
   // Drop weapon
-  scrPlace(heldWeapon.id);
+  script_execute(heldWeapon.placeScript,heldWeapon.id);
   heldWeapon = noone;
 }
 </string>
