@@ -38,6 +38,17 @@ facing = 1;
 vertSpeed = 0;
 
 heldWeapon = noone;
+
+/*
+scale = 1;
+image_xscale = scale;
+image_yscale = scale;
+
+//Animation
+//Animations are: "Walk"
+
+skeleton_animation_set("Walk");
+*/
 </string>
           </argument>
         </arguments>
@@ -223,6 +234,41 @@ if(heldWeapon != noone &amp;&amp; instance_exists(heldWeapon)) {
   heldWeapon.y = y + 20;
   heldWeapon.facing = facing;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change animations
+/*
+if (facing = 1) {
+    image_xscale = 1 * scale;
+} else {
+    image_xscale = -1 * scale;
+}
+
+if (proposedXMvt &gt; 0) {
+    skeleton_animation_set("Walk");
+} else {
+
+}
+
+*/
 </string>
           </argument>
         </arguments>

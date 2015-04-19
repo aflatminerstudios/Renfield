@@ -1,0 +1,48 @@
+
+DALIRenfieldTest303.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm
+  rotate: false
+  xy: 394, 620
+  size: 350, 244
+  orig: 350, 244
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 394, 410
+  size: 208, 295
+  orig: 208, 295
+  offset: 0, 0
+  index: -1
+left leg
+  rotate: false
+  xy: 2, 15
+  size: 180, 426
+  orig: 180, 426
+  offset: 0, 0
+  index: -1
+rear arm
+  rotate: true
+  xy: 746, 694
+  size: 170, 254
+  orig: 170, 254
+  offset: 0, 0
+  index: -1
+right leg
+  rotate: false
+  xy: 184, 2
+  size: 117, 439
+  orig: 117, 439
+  offset: 0, 0
+  index: -1
+torso
+  rotate: false
+  xy: 2, 443
+  size: 390, 421
+  orig: 390, 421
+  offset: 0, 0
+  index: -1

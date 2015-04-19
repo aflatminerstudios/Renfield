@@ -130,6 +130,8 @@
     </objects>
     <object>objects\objTitleControl</object>
     <object>objects\objLadder</object>
+    <object>objects\objRenfieldTest</object>
+    <object>objects\objSpineAssister</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLevel1</room>
