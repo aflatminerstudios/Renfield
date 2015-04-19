@@ -44,6 +44,13 @@
       <path>paths\pathLevel1D</path>
       <path>paths\pathLevel1E</path>
     </paths>
+    <paths name="Level2">
+      <path>paths\pathLevel2A</path>
+      <path>paths\pathLevel2B</path>
+      <path>paths\pathLevel2C</path>
+      <path>paths\pathLevel2D</path>
+      <path>paths\pathLevel2E</path>
+    </paths>
   </paths>
   <scripts name="scripts">
     <script>scripts\scrNull.gml</script>
