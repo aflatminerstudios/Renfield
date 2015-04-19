@@ -156,9 +156,9 @@ y += vertSpeed;
             <kind>1</kind>
             <string>/// Check action button and down key
 
-var actionPressed = keyboard_check_pressed(ord('z')) ||
-                    keyboard_check_pressed(ord('x')) ||
-                    keyboard_check_pressed(ord('c')) ||
+var actionPressed = keyboard_check_pressed(ord('Z')) ||
+                    keyboard_check_pressed(ord('X')) ||
+                    keyboard_check_pressed(ord('C')) ||
                     keyboard_check_pressed(vk_control);
                     
 var downPressed = keyboard_check_pressed(vk_down);
@@ -180,13 +180,20 @@ if(actionPressed){
         script_execute(playerAttack);
     }
   }
+} else if(!holdingWeapon &amp;&amp; downPressed) {
+  // attempt to pick up weapon if touching one
+  var weapon = instance_place(x,y,objWeapon);
+  if(weapon != noone){
+    if(object_get_parent(weapon) != objWeaponHeld) {
+      heldWeapon = weapon;
+      scrConvertWeaponToHeld(weapon.id);
+    }
+  }
+} else if(holdingWeapon &amp;&amp; downPressed) {
+  // Drop weapon
+  scrPlace(heldWeapon.id);
+  heldWeapon = noone;
 }
-
-if(holdingWeapon &amp;&amp; downPressed) {
-    // Drop weapon
-    scrPlace(heldWeapon.id);
-    heldWeapon = noone;
-  } 
 </string>
           </argument>
         </arguments>
