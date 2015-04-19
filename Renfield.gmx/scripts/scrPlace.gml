@@ -12,5 +12,9 @@ with (object) {
         instance_change(base, false);
     } else {
         instance_change(placed, true);
+        
+        with (objScoreControl) {
+            totalPlaced += 1;
+        }
     }
 }

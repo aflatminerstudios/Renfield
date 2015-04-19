@@ -43,16 +43,17 @@ heldWeapon = noone;
 alarm[11] = -50;
 
 
-scale = 1;
+scale = 0.1;
 image_xscale = scale;
 image_yscale = scale;
 
 //Animation
 //Animations are: "Walk", "Idle", "Held"
+skeleton_animation_set("Idle");
 
-skeleton_animation_set("Idle")
-//skeleton_animation_set_ext("Hold", 1);
-//skeleton_animation_set_ext("Walk",2);
+
+//skeleton_animation_set("Walk")
+
 </string>
           </argument>
         </arguments>
@@ -371,17 +372,25 @@ if (facing = 1) {
 
 if (heldWeapon != noone) {
     if (proposedXMvt != 0) {
-        skeleton_animation_set("Walk");
+        if (skeleton_animation_get_ext(2) != "Walk") {
+            skeleton_animation_set_ext("Hold", 1);
+            skeleton_animation_set_ext("Walk",2);
+        }
     } else {
-        skeleton_animation_set("Idle");
+        if (skeleton_animation_get_ext(2) != "Idle") {    
+            skeleton_animation_set_ext("Hold", 1);
+            skeleton_animation_set_ext("Idle",2);
+        }
     }
-} else {
-    if (proposedXMvt != 0) {
-        skeleton_animation_set("Walk");
+} else if (proposedXMvt != 0) {
+        if (skeleton_animation_get() != "Walk") {
+            skeleton_animation_set("Walk");
+        }
     } else {
-        skeleton_animation_set("Idle");
+        if (skeleton_animation_get() != "Idle") {
+           skeleton_animation_set("Idle");
+        }
     }
-}
 
 
 </string>

@@ -136,6 +136,7 @@
     <object>objects\objLadder</object>
     <object>objects\objRenfieldTest</object>
     <object>objects\objSpineAssister</object>
+    <object>objects\objScoreControl</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSurfaceSetup</room>

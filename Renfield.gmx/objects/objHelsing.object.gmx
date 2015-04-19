@@ -40,6 +40,8 @@ path = noone;
 attack = scrEnemyAttack;
 takeDamage = scrNull;
 
+points = 750;
+
 image_speed = 0;
 </string>
           </argument>
