@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>/// Initialization
 
-hp = 100;
+baseHp = 100;
+hp = baseHp;
 armor = 1.0;
 strength = 25;
 

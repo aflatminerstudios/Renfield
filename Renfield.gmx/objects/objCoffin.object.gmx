@@ -143,9 +143,11 @@ if (hp &lt;= 0)
           <argument>
             <kind>1</kind>
             <string>draw_self();
-var barX = x;// - sprite_xoffset;
-var barY = y - sprite_yoffset - 2;
-scrDrawHealthBar(barX,barY,hp/baseHp,c_purple);
+if(hp &lt; baseHp) {
+  var barX = x;// - sprite_xoffset;
+  var barY = y - sprite_yoffset - 2;
+  scrDrawHealthBar(barX,barY,hp/baseHp,c_purple);
+}
 </string>
           </argument>
         </arguments>

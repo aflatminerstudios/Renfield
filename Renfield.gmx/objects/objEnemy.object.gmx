@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>/// Initialization
 
-hp = 10;
+baseHp = 10;
+hp = baseHp;
 armor = 1.0;
 strength = 2;
 
@@ -385,6 +386,35 @@ alarm[1] = room_speed / 2;
 if (alarm[3] &lt;= 0 &amp;&amp; other.hp &gt; 0) {
     script_execute(attack, other.id, strength);
     alarm[3] = room_speed / 2;    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Draw self and healthbar if necessary
+draw_self();
+if(hp &lt; baseHp) {
+  var barX = x;// - sprite_xoffset;
+  var barY = y - sprite_yoffset - 2;
+  scrDrawHealthBar(barX,barY,hp/baseHp,c_red);
 }
 </string>
           </argument>
