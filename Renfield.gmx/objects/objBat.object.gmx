@@ -90,7 +90,35 @@ if (abs(x - tarX) &lt;= 10) {
     alarm[11] = room_speed * irandom(5);
     speed = 0;
 } else {
-    move_towards_point(tarX, y, moveSpeed);
+    
+    if (x &lt; tarX) {
+        proposedXMvt = moveSpeed;
+    } else {
+        proposedXMvt = moveSpeed * -1;
+    }
+
+    var hCollide;
+    hCollide = instance_place(x+proposedXMvt, y, objParentFloor);
+    if(hCollide != noone) {
+      if(hCollide.wallType == SOLIDFLOOR) {
+        var yplus = 0;
+        while(place_meeting(x+proposedXMvt, y-yplus, objParentFloor) &amp;&amp; yplus &lt;= abs(1*proposedXMvt))
+          yplus += 1;
+        if(place_meeting(x+proposedXMvt, y-yplus,objParentFloor)) {
+          while(!place_meeting(x+sign(proposedXMvt), y, objParentFloor))
+            x += sign(proposedXMvt);
+          proposedXMvt = 0;
+        } else {
+          y -= yplus;
+        }
+      }
+    }
+
+    if (proposedXMvt != 0) {        
+        move_towards_point(tarX, y, moveSpeed);
+    } else {
+        tarX = x;
+    }
 }
 </string>
           </argument>
