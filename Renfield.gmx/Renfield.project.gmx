@@ -13,21 +13,24 @@
       <sprite>sprites\sprShot</sprite>
       <sprite>sprites\sprWeb</sprite>
       <sprite>sprites\sprFly</sprite>
+      <sprite>sprites\sprCat</sprite>
       <sprite>sprites\sprSpider</sprite>
+      <sprite>sprites\sprBat</sprite>
     </sprites>
     <sprite>sprites\sprSun</sprite>
     <sprite>sprites\sprMoon</sprite>
-    <sprite>sprites\sprSpineTest</sprite>
     <sprites name="Enemies">
       <sprite>sprites\sprPeasant</sprite>
       <sprite>sprites\sprPitchfork</sprite>
       <sprite>sprites\sprBatteringRam</sprite>
       <sprite>sprites\sprHelsing</sprite>
     </sprites>
+    <sprite>sprites\sprSoundWaves</sprite>
     <sprites name="Blocks">
       <sprite>sprites\sprJumpThroughFloor</sprite>
       <sprite>sprites\sprSolidWall</sprite>
     </sprites>
+    <sprite>sprites\sprLadder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -46,7 +49,7 @@
     <scripts name="Enemies">
       <script>scripts\scrSpawnEnemy.gml</script>
       <script>scripts\scrEnemyAttack.gml</script>
-      <script>scripts\scrCreateWave.gml</script>
+      <script>scripts\scrCreateSpawner.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\scrEat.gml</script>
@@ -56,9 +59,14 @@
       <script>scripts\scrFlyToss.gml</script>
       <script>scripts\scrPlace.gml</script>
       <script>scripts\scrConvertWeaponToHeld.gml</script>
+      <script>scripts\scrFrogShootHeld.gml</script>
+      <script>scripts\scrPlaceCat.gml</script>
+      <script>scripts\scrBatScreech.gml</script>
       <script>scripts\scrFreeze.gml</script>
     </scripts>
     <script>scripts\scrHoldObject.gml</script>
+    <script>scripts\scrSpiderShootHeld.gml</script>
+    <script>scripts\scrSpeedFromDuration.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objRenfield</object>
@@ -71,12 +79,19 @@
       <object>objects\objWeaponHeld</object>
       <object>objects\objWeaponPlaced</object>
       <object>objects\objFrogHeld</object>
-      <object>objects\objFlyHeld</object>
       <object>objects\objFrogPlaced</object>
+      <object>objects\objFlyHeld</object>
       <object>objects\objFlyPlaced</object>
       <object>objects\objSpiderHeld</object>
       <object>objects\objSpiderPlaced</object>
       <object>objects\objSpider</object>
+      <object>objects\objBatPlaced</object>
+      <object>objects\objBatHeld</object>
+      <object>objects\objBat</object>
+      <object>objects\objCat</object>
+      <object>objects\objCatHeld</object>
+      <object>objects\objCatPlaced</object>
+      <object>objects\objSoundWave</object>
     </objects>
     <object>objects\objTestControl</object>
     <objects name="Enemies">
@@ -92,9 +107,9 @@
     <object>objects\objDayNightController</object>
     <object>objects\objST</object>
     <object>objects\objNewTest</object>
-    <object>objects\objWave</object>
-    <object>objects\objWaveController</object>
-    <objects name="WaveControllers">
+    <object>objects\objSpawner</object>
+    <objects name="LevelControllers">
+      <object>objects\objLevelController</object>
       <object>objects\objLevel1Controller</object>
     </objects>
     <objects name="Blocks">
@@ -102,12 +117,14 @@
       <object>objects\objParentFloor</object>
       <object>objects\objSolidFloor</object>
     </objects>
+    <object>objects\objTitleControl</object>
+    <object>objects\objLadder</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\roomTestMicha</room>
     <room>rooms\rmLevel1</room>
-    <room>rooms\rmWeaponTest</room>
-    <room>rooms\rmSpineTest</room>
+    <room>rooms\roomTestMicha</room>
+    <room>rooms\rmTitle</room>
+    <room>rooms\rmGameOver</room>
   </rooms>
   <constants number="5">
     <constant name="GRAVITY">0.3</constant>
