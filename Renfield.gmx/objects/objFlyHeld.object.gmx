@@ -27,8 +27,44 @@
             <kind>1</kind>
             <string>
 if (released) {
-    gravity = GRAVITY;
-    speed = 15;
+    baseGravity = GRAVITY;
+    speed = 17 * facing;
+    
+    
+    vertSpeed += baseGravity;
+    
+    if(vertSpeed &gt; maxVelocity)
+      vertSpeed = maxVelocity;
+    
+    
+    var vCollide;
+    vCollide = instance_place(x, y+vertSpeed, objParentFloor);
+    if(vCollide != noone) {
+      if(vCollide.wallType == SOLIDFLOOR) {
+        while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+          y += sign(vertSpeed);
+        vertSpeed = 0;
+        onGround = true;
+      }
+      if ((vCollide.wallType == JUMPTHROUGHFLOOR) &amp;&amp; sign(vertSpeed) == 1) {
+        if(!place_meeting(x,y,objParentFloor)) {
+          while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+            y += 1;
+          vertSpeed = 0;
+          onGround = true;
+        } 
+      }
+    } else {
+      onGround = false;
+    }
+    
+    y += vertSpeed;    
+
+    if (onGround) {
+        scrPlaceFly(self.id);
+        y -= 35;
+    }    
+        
 }
 </string>
           </argument>

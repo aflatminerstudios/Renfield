@@ -28,7 +28,6 @@
             <string>///Change animation
 
 skeleton_animation_set(heldAnimation);
-show_debug_message("Calling it!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 </string>
           </argument>
         </arguments>

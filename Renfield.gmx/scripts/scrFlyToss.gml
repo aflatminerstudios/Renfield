@@ -1,5 +1,8 @@
-///scrFlyToss(fly)
+///scrFlyToss()
 
 released = true;
 
+with (objRenfield) {
+    heldWeapon = noone;
+}
 

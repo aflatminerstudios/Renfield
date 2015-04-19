@@ -28,16 +28,9 @@
             <string>///Shoot with less damage, but more distance
 
 var shot = instance_create(x, y, objWeb);
-var mult = 1;
-
-
-var r = irandom(19);
-if (r % 2 == 0) {
-    mult = -1;
-}
 
 with (shot) {
-    move_towards_point(x + (150 * mult), y, speed); 
+    move_towards_point(x + (150 * facing), y, speed); 
     damage = 1 * other.level;
     alarm[0] *= 2;
 }

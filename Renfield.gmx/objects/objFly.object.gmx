@@ -41,6 +41,10 @@ tarY = y;
 placed = false;
 held = false;
 
+vertSpeed = 0;
+baseGravity = 0;
+maxVelocity = 30;
+
 //scripts
 autoAttack = scrNull;
 playerAttack = scrFlyToss;
@@ -75,6 +79,9 @@ image_xscale = 0.2;
 image_yscale = 0.2;
 heldAnimation = "Stationary";
 placedAnimation = "Moving";
+
+
+
 </string>
           </argument>
         </arguments>

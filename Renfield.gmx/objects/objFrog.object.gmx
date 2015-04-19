@@ -151,16 +151,10 @@ tarX = x + sprite_width * 2 * dir;
             <string>///Shoot with less damage, but more distance
 
 var shot = instance_create(x, y, objShot);
-var mult = 1;
 
-
-var r = irandom(19);
-if (r % 2 == 0) {
-    mult = -1;
-}
 
 with (shot) {
-    move_towards_point(x + (100 * mult), y, speed); 
+    move_towards_point(x + (100 * facing), y, speed); 
     damage = 2;
     alarm[0] *= 2;
 }
@@ -189,16 +183,9 @@ with (shot) {
             <string>///Shoot
 
 var shot = instance_create(x, y, objShot);
-var mult = 1;
-
-
-var r = irandom(19);
-if (r % 2 == 0) {
-    mult = -1;
-}
 
 with (shot) {
-    move_towards_point(x + (100 * mult), y, speed); 
+    move_towards_point(x + (100 * facing), y, speed); 
     damage = 2;
 }
 </string>

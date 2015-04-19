@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Setup Default values
 
+facing = false;
 moveSpeed = room_speed / 8;
 canEat[0] = objFly;
 canEat[1] = objFlyPlaced;
