@@ -26,9 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialization
+randomize();
 
 dayDuration = 45;
 nightDuration = 15;
+maxFliesToSpawn = 10;
+maxFrogsToSpawn = 5;
+maxSpidersToSpawn = 5;
+maxBatsToSpawn = 5;
+maxCatsToSpawn = 2;
+
 
 /// Create DayNight controller instance
 roundController = instance_create(room_width / 2, room_height, objDayNightController);
@@ -117,10 +124,56 @@ alarm[1] = dayDuration * room_speed;
             <string>/// Night Cycles
 
 /// Remove all unplaced weapons
-show_debug_message("Despawn unplaced weapons.");
+with (objWeapon)
+{
+    if ((object_get_parent(object_index) != objWeaponPlaced) &amp;&amp; (object_get_parent(object_index) != objWeaponHeld))
+    {
+        alarm[0] = 1;
+    }
+}
 
 /// Spawn new weapons
-show_debug_message("Spawn weapons.");
+intFlyCount = irandom(maxFliesToSpawn);
+intFrogCount = irandom(maxFrogsToSpawn);
+intSpiderCount = irandom(maxSpidersToSpawn);
+intBatCount = irandom(maxBatsToSpawn);
+intCatCount = irandom(maxCatsToSpawn);
+
+for(i = 0; i &lt; intFlyCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objFly);
+}
+
+for(i = 0; i &lt; intFrogCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objFrog);
+}
+
+for(i = 0; i &lt; intSpiderCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objSpider);
+}
+
+for(i = 0; i &lt; intBatCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objBat);
+}
+
+for(i = 0; i &lt; intCatCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objCat);
+}
+
 
 alarm[2] = nightDuration * room_speed;
 </string>
