@@ -79,6 +79,7 @@
     </scripts>
     <script>scripts\scrHoldObject.gml</script>
     <script>scripts\scrSpeedFromDuration.gml</script>
+    <script>scripts\scrDrawHealthBar.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objRenfield</object>
