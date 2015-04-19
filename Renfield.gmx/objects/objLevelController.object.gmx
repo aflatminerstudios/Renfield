@@ -54,7 +54,7 @@ waveDelay
 initialize rounds
 */
 
-alarm[1] = nightDuration * room_speed;
+alarm[1] = 1;
 </string>
           </argument>
         </arguments>
@@ -77,11 +77,21 @@ alarm[1] = nightDuration * room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Round 2
+            <string>/// Day Cycles
 
-wave1 = scrCreateSpawner(objHelsing, 5, 1, 2, spawnAPath);
-wave2 = scrCreateSpawner(objPeasant, 7, 1, 3, spawnBPath);
-wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, spawnCPath);
+switch (roundController.roundCount)
+{
+    case 0:
+        wave1 = scrCreateSpawner(objBatteringRam, 5, 1, 2, spawnAPath);
+        wave2 = scrCreateSpawner(objPitchforker, 7, 1, 3, spawnBPath);
+        wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, spawnCPath);
+        wave4 = scrCreateSpawner(objHelsing, 2, 100, 5, spawnCPath);
+        break;
+    case 1:
+        wave1 = scrCreateSpawner(objHelsing, 5, 1, 2, spawnAPath);
+        break;
+}
+alarm[1] = dayDuration * room_speed;
 </string>
           </argument>
         </arguments>
@@ -104,14 +114,39 @@ wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, spawnCPath);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Round 1
+            <string>/// Night Cycles
 
-wave1 = scrCreateSpawner(objBatteringRam, 5, 1, 2, spawnAPath);
-wave2 = scrCreateSpawner(objPitchforker, 7, 1, 3, spawnBPath);
-wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, spawnCPath);
-wave4 = scrCreateSpawner(objHelsing, 2, 100, 5, spawnCPath);
+/// Remove all unplaced weapons
+show_debug_message("Despawn unplaced weapons.");
 
-alarm[2] = (dayDuration + nightDuration) * room_speed;
+/// Spawn new weapons
+show_debug_message("Spawn weapons.");
+
+alarm[2] = nightDuration * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Destroy
+instance_destroy();
 </string>
           </argument>
         </arguments>
