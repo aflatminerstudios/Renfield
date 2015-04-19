@@ -55,6 +55,7 @@ facing = 1;
 waveCount = 0;
 maxWaves = 5;
 delay = 5;
+moveDist = sprite_width * 4;
 </string>
           </argument>
         </arguments>
@@ -80,7 +81,9 @@ delay = 5;
             <string>///Bat movement
 
 if (abs(x - tarX) &lt;= 10) {
-    tarX = x + irandom(moveDist) - moveDist /2;
+    tarX = x + (irandom(moveDist) - moveDist /2) * 2;
+    alarm[11] = room_speed * irandom(5);
+    speed = 0;
 } else {
     move_towards_point(tarX, y, moveSpeed);
 }
