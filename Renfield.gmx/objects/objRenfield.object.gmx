@@ -29,6 +29,7 @@
 
 onGround = false;
 hp = 100;
+maxHP = 100;
 baseGravity = 0.3;
 jumpVelocity = 8;
 maxVelocity = 30;
@@ -39,22 +40,122 @@ vertSpeed = 0;
 
 heldWeapon = noone;
 
-/*
+alarm[11] = -50;
+
+
 scale = 1;
 image_xscale = scale;
 image_yscale = scale;
 
 //Animation
-//Animations are: "Walk"
+//Animations are: "Walk", "Idle", "Held"
 
-skeleton_animation_set("Walk");
-*/
+skeleton_animation_set("Idle")
+//skeleton_animation_set_ext("Hold", 1);
+//skeleton_animation_set_ext("Walk",2);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set HP back to max hp
+hp = maxHP;
+alarm[11] = -50;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>hp &lt;= 0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (alarm[11] &lt; 0) {
+    skeleton_animation_set("Idle");
+    alarm[11] = room_speed * 2;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -168,7 +269,7 @@ y += vertSpeed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check action button and down key
+            <string>/// Check action button and down key and eat key
 
 var actionPressed = keyboard_check_pressed(ord('Z')) ||
                     keyboard_check_pressed(ord('X')) ||
@@ -177,7 +278,13 @@ var actionPressed = keyboard_check_pressed(ord('Z')) ||
                     
 var downPressed = keyboard_check_pressed(vk_down);
 
+var eatPressed = keyboard_check_pressed(ord('Q'));
+
 var holdingWeapon = (heldWeapon != noone);
+
+if (eatPressed &amp;&amp; holdingWeapon) {
+    scrRenfieldEat(self.id);   
+}
 
 if(actionPressed){
   if(!holdingWeapon) {
@@ -255,23 +362,65 @@ if(heldWeapon != noone &amp;&amp; instance_exists(heldWeapon)) {
           <argument>
             <kind>1</kind>
             <string>///Change animations
-/*
+
 if (facing = 1) {
     image_xscale = 1 * scale;
 } else {
     image_xscale = -1 * scale;
 }
 
-if (proposedXMvt &gt; 0) {
-    skeleton_animation_set("Walk");
+if (heldWeapon != noone) {
+    if (proposedXMvt != 0) {
+        skeleton_animation_set("Walk");
+    } else {
+        skeleton_animation_set("Idle");
+    }
 } else {
-
+    if (proposedXMvt != 0) {
+        skeleton_animation_set("Walk");
+    } else {
+        skeleton_animation_set("Idle");
+    }
 }
 
-*/
+
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

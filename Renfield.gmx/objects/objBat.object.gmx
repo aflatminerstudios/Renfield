@@ -158,7 +158,17 @@ if (abs(x - tarX) &lt;= 10) {
 event_inherited();
 
 
+/*var map = ds_map_create();
+skeleton_bone_state_get("Layer 0", map);
+var xx = ds_map_find_value(map, "worldX");
+var yy = ds_map_find_value(map, "worldY");
+var wx = (x + xx);
+var wy = (y + yy);
 
+show_debug_message("Bat X = " + string(x) + "Y = " + string(y));
+show_debug_message("Body X = " + string(wx) + "Y = " + string(wy));
+ds_map_clear(map);
+*/
 </string>
           </argument>
         </arguments>
