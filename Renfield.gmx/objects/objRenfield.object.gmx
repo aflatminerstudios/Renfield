@@ -231,7 +231,7 @@ if(actionPressed){
             <string>/// Move held weapon with player
 if(heldWeapon != noone &amp;&amp; instance_exists(heldWeapon)) {
   heldWeapon.x = x + 20;
-  heldWeapon.y = y + 20;
+  heldWeapon.y = y;
   heldWeapon.facing = facing;
 }
 </string>

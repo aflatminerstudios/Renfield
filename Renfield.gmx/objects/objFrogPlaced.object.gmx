@@ -28,16 +28,9 @@
             <string>///Shoot
 
 var shot = instance_create(x, y, objShot);
-var mult = 1;
-
-
-var r = irandom(19);
-if (r % 2 == 0) {
-    mult = -1;
-}
 
 with (shot) {
-    move_towards_point(x + (100 * mult), y, speed); 
+    move_towards_point(x + (100 * other.facing), y, speed); 
     damage = 4 * other.level;
 }
 </string>
