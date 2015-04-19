@@ -229,7 +229,9 @@ alarm[2] = room_speed * other.level;
             <kind>1</kind>
             <string>/// Attack the weapon!
 
-script_execute(attack, other.id, strength);
+if (object_get_parent(other.object_index) != objWeaponHeld) {
+    script_execute(attack, other.id, strength);
+}
 </string>
           </argument>
         </arguments>
