@@ -29,6 +29,7 @@
 baseHp = 25;
 hp = baseHp;
 armor = 1.0;
+
 </string>
           </argument>
         </arguments>
