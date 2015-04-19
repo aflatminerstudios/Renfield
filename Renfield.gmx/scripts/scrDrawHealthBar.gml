@@ -21,6 +21,11 @@ var yBottom = yCenter + barHeight/2;
 var healthBarLeft = xLeft+borderWidth;
 var healthBarRight = (xRight-xLeft - borderWidth*2)*percent + healthBarLeft;
 
+if(percent < 0)
+  percent = 0;
+if(percent > 1)
+  percent = 1;
+
 if(rounded){
   // narrow box
   draw_rectangle_colour(xLeft, yTop+1, xRight, yBottom-1, bgColor, bgColor, bgColor, bgColor, false);
