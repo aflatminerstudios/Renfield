@@ -64,6 +64,7 @@
     </scripts>
     <script>scripts\scrHoldObject.gml</script>
     <script>scripts\scrSpiderShootHeld.gml</script>
+    <script>scripts\scrSpeedFromDuration.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Weapons">
