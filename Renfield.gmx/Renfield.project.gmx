@@ -121,6 +121,7 @@
     <objects name="LevelControllers">
       <object>objects\objLevelController</object>
       <object>objects\objLevel1Controller</object>
+      <object>objects\objLevel2Controller</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objJumpThroughFloor</object>
