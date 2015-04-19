@@ -27,21 +27,62 @@
             <kind>1</kind>
             <string>/// Initialization
 
+dayDuration = 45;
+nightDuration = 15;
+
+/// Create DayNight controller instance
+roundController = instance_create(room_width / 2, room_height, objDayNightController);
+
+/// Set day length
+roundController.daySpeed = scrSpeedFromDuration(dayDuration);
+/// Set night length
+roundController.nightSpeed = scrSpeedFromDuration(nightDuration);
+roundController.rotSpeed = roundController.nightSpeed;
+
+/// Setup paths
 path_append(pathLevel1A, pathLevel1E);
-wave1Path = pathLevel1A;
-
+spawnAPath = pathLevel1A;
 path_append(pathLevel1D, pathLevel1E);
-
 path_append(pathLevel1B, pathLevel1D);
-wave2Path = pathLevel1B;
-
+spawnBPath = pathLevel1B;
 path_append(pathLevel1C, pathLevel1D);
-wave3Path = pathLevel1C;
+spawnCPath = pathLevel1C;
 
-wave1 = scrCreateSpawner(objBatteringRam, 5, 1, 2, wave1Path);
-wave2 = scrCreateSpawner(objPitchforker, 7, 1, 3, wave2Path);
-wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, wave3Path);
-wave4 = scrCreateSpawner(objHelsing, 2, 100, 5, wave3Path);
+/*
+waveLength
+waveDelay
+initialize rounds
+*/
+
+alarm[1] = nightDuration * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Round 1
+
+wave1 = scrCreateSpawner(objBatteringRam, 5, 1, 2, spawnAPath);
+wave2 = scrCreateSpawner(objPitchforker, 7, 1, 3, spawnBPath);
+wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, spawnCPath);
+wave4 = scrCreateSpawner(objHelsing, 2, 100, 5, spawnCPath);
 </string>
           </argument>
         </arguments>
