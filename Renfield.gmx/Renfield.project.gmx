@@ -108,6 +108,7 @@
     <object>objects\objTestControl</object>
     <objects name="Enemies">
       <object>objects\objEnemy</object>
+      <object>objects\objKnight</object>
       <object>objects\objPeasant</object>
       <object>objects\objPitchforker</object>
       <object>objects\objBatteringRam</object>
