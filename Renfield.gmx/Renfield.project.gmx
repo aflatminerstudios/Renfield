@@ -137,6 +137,7 @@
     <object>objects\objSpineAssister</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\roomTestMicha</room>
