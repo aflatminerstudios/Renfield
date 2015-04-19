@@ -117,7 +117,13 @@ alarm[1] = dayDuration * room_speed;
             <string>/// Night Cycles
 
 /// Remove all unplaced weapons
-show_debug_message("Despawn unplaced weapons.");
+with (objWeapon)
+{
+    if ((object_get_parent(object_index) != objWeaponPlaced) &amp;&amp; (object_get_parent(object_index) != objWeaponHeld))
+    {
+        alarm[0] = 1;
+    }
+}
 
 /// Spawn new weapons
 show_debug_message("Spawn weapons.");
