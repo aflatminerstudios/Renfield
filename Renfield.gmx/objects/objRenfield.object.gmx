@@ -175,6 +175,10 @@ if(actionPressed){
         scrConvertWeaponToHeld(weapon.id);
       }
     }
+  } else {
+    with (heldWeapon) {
+        script_execute(playerAttack);
+    }
   }
 }
 
