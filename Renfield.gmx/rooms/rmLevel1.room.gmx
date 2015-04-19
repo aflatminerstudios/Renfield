@@ -53,6 +53,73 @@
   <instances>
     <instance objName="objCoffin" x="992" y="704" name="inst_6EF59B78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLevel1Controller" x="0" y="0" name="inst_485964DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="32" y="736" name="inst_A4101A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="96" y="736" name="inst_93EC7823" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="64" y="736" name="inst_EA5E1D0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="160" y="736" name="inst_2023CB58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="128" y="736" name="inst_DB788F3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="192" y="736" name="inst_49BFDAD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="224" y="736" name="inst_DAB64D5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="256" y="736" name="inst_F6F50121" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="288" y="736" name="inst_1FE097AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="320" y="736" name="inst_22EC9673" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="352" y="736" name="inst_F27C2B33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="384" y="736" name="inst_97CDCAC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="416" y="736" name="inst_2D9C8284" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="448" y="736" name="inst_54533717" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="480" y="736" name="inst_A2209FA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="512" y="736" name="inst_311EA600" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="544" y="736" name="inst_24F16B00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="576" y="736" name="inst_4D39CC69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="608" y="736" name="inst_FFA39BB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="640" y="736" name="inst_56053F7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="672" y="736" name="inst_2D761704" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="704" y="736" name="inst_CF74F3FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="736" y="736" name="inst_C916312C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="768" y="736" name="inst_E99E29B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="800" y="736" name="inst_BC02FD60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="832" y="736" name="inst_86F94D59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="896" y="736" name="inst_F04DD27F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="864" y="736" name="inst_E10764FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="928" y="736" name="inst_6584385F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="960" y="736" name="inst_73812B3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="992" y="736" name="inst_73852CC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="320" y="512" name="inst_A6FE1631" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="352" y="512" name="inst_7C58A13A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="384" y="512" name="inst_BCC61052" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="416" y="512" name="inst_FB9D5DB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="448" y="512" name="inst_667C3B5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="480" y="512" name="inst_4B80DA12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="512" y="512" name="inst_19B5D83E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="544" y="512" name="inst_FE2E8645" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="576" y="512" name="inst_A2C1C257" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="608" y="512" name="inst_EA891780" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="32" y="256" name="inst_A59D9944" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="64" y="256" name="inst_BCC4E7C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="96" y="256" name="inst_0CE8AC1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="128" y="256" name="inst_6B8EA970" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="160" y="256" name="inst_E785B28E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="192" y="256" name="inst_82215814" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="224" y="256" name="inst_67D532C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="256" y="256" name="inst_4D8D033A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="288" y="256" name="inst_AFC53DB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="320" y="256" name="inst_4EFA820D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="608" y="256" name="inst_88F61822" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="640" y="256" name="inst_88F5F4C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="672" y="256" name="inst_662A6F19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="704" y="256" name="inst_0A988C89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="736" y="256" name="inst_0B42D9C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="768" y="256" name="inst_56B3E7A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="800" y="256" name="inst_55A9B7A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="832" y="256" name="inst_1229C4A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="864" y="256" name="inst_35710EE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="896" y="256" name="inst_B2F7EAA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="928" y="256" name="inst_29871151" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="960" y="256" name="inst_55484EE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="992" y="256" name="inst_3EA5E856" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objJumpThroughFloor" x="0" y="256" name="inst_A7928EF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSolidFloor" x="0" y="736" name="inst_EB0AF06F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRenfield" x="480" y="672" name="inst_4F0F21D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
