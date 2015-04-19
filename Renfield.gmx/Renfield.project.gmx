@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\sprRenfield</sprite>
     <sprite>sprites\sprCoffin</sprite>
     <sprites name="Weapons">
       <sprite>sprites\sprFrog</sprite>
@@ -25,6 +26,10 @@
       <sprite>sprites\sprHelsing</sprite>
     </sprites>
     <sprite>sprites\sprSoundWaves</sprite>
+    <sprites name="Blocks">
+      <sprite>sprites\sprJumpThroughFloor</sprite>
+      <sprite>sprites\sprSolidWall</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -101,15 +106,24 @@
     <objects name="WaveControllers">
       <object>objects\objLevel1Controller</object>
     </objects>
+    <objects name="Blocks">
+      <object>objects\objJumpThroughFloor</object>
+      <object>objects\objParentFloor</object>
+      <object>objects\objRenfield</object>
+      <object>objects\objSolidFloor</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmWeaponTest</room>
+    <room>rooms\roomTestMicha</room>
     <room>rooms\rmLevel1</room>
   </rooms>
-  <constants number="3">
+  <constants number="5">
     <constant name="GRAVITY">0.3</constant>
     <constant name="DAY">0</constant>
     <constant name="NIGHT">1</constant>
+    <constant name="SOLIDFLOOR">1</constant>
+    <constant name="JUMPTHROUGHFLOOR">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
