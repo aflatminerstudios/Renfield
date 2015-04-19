@@ -30,6 +30,7 @@ randomize();
 
 dayDuration = 45;
 nightDuration = 15;
+minWeaponSpawnY = room_height / 2;
 maxFliesToSpawn = 10;
 maxFrogsToSpawn = 5;
 maxSpidersToSpawn = 5;
@@ -144,38 +145,37 @@ intCatCount = irandom(maxCatsToSpawn);
 for(i = 0; i &lt; intFlyCount; i++)
 {
     spawnX = irandom(room_width);
-    spawnY = irandom(room_height);
+    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
     instance_create(spawnX, spawnY, objFly);
 }
 
 for(i = 0; i &lt; intFrogCount; i++)
 {
     spawnX = irandom(room_width);
-    spawnY = irandom(room_height);
+    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
     instance_create(spawnX, spawnY, objFrog);
 }
 
 for(i = 0; i &lt; intSpiderCount; i++)
 {
     spawnX = irandom(room_width);
-    spawnY = irandom(room_height);
+    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
     instance_create(spawnX, spawnY, objSpider);
 }
 
 for(i = 0; i &lt; intBatCount; i++)
 {
     spawnX = irandom(room_width);
-    spawnY = irandom(room_height);
+    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
     instance_create(spawnX, spawnY, objBat);
 }
 
 for(i = 0; i &lt; intCatCount; i++)
 {
     spawnX = irandom(room_width);
-    spawnY = irandom(room_height);
+    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
     instance_create(spawnX, spawnY, objCat);
 }
-
 
 alarm[2] = nightDuration * room_speed;
 </string>

@@ -30,6 +30,7 @@ randomize();
 
 dayDuration = 45;
 nightDuration = 15;
+minWeaponSpawnY = room_height / 2
 maxFliesToSpawn = 10;
 maxFrogsToSpawn = 5;
 maxSpidersToSpawn = 5;
