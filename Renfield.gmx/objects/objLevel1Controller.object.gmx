@@ -91,13 +91,31 @@ alarm[1] = 1;
 switch (roundController.roundCount)
 {
     case 0:
-        wave1 = scrCreateSpawner(objBatteringRam, 5, 1, 2, spawnAPath);
-        wave2 = scrCreateSpawner(objPitchforker, 7, 1, 3, spawnBPath);
-        wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, spawnCPath);
-        wave4 = scrCreateSpawner(objHelsing, 2, 100, 5, spawnCPath);
+        spawn1 = scrCreateSpawner(objPeasant, 20, 10, 1, spawnBPath);
+        spawn2 = scrCreateSpawner(objKnight, 2, 1, 10, spawnBPath);
         break;
     case 1:
-        wave1 = scrCreateSpawner(objHelsing, 5, 1, 2, spawnAPath);
+        spawn1 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnBPath);
+        spawn2 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnAPath);
+        break;
+    case 2:
+        spawn1 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnBPath);
+        spawn2 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnAPath);
+        spawn3 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnCPath);
+        break;
+    case 3:
+        spawn1 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnBPath);
+        spawn2 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnAPath);
+        spawn3 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnCPath);
+        break;
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    default:
+        room_goto(rmLevel2);
         break;
 }
 alarm[1] = dayDuration * room_speed;
