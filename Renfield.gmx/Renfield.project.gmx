@@ -125,6 +125,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLevel1</room>
+    <room>rooms\rmLevel2</room>
     <room>rooms\roomTestMicha</room>
     <room>rooms\rmTitle</room>
     <room>rooms\rmGameOver</room>
