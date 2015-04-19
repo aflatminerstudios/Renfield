@@ -233,6 +233,40 @@ alarm[2] = room_speed * other.level;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="objCatPlaced">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Send back to previous position and attack the cat
+
+path_position = path_positionprevious;
+
+/// Attack the weapon!
+
+if (alarm[3] &lt;= 0) {
+    if (object_get_parent(other.object_index) != objWeaponHeld) {
+        script_execute(attack, other.id, strength);
+        alarm[3] = room_speed / 2;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="objWeapon">
       <action>
         <libid>1</libid>
@@ -282,7 +316,14 @@ if (alarm[3] &lt;= 0) {
             <kind>1</kind>
             <string>/// Attack the fly, but go slow (if possible)!
 
-script_execute(attack, other.id, strength);
+/// Attack the weapon!
+
+if (alarm[3] &lt;= 0) {
+    if (object_get_parent(other.object_index) != objWeaponHeld) {
+        script_execute(attack, other.id, strength);
+        alarm[3] = room_speed / 2;
+    }
+}
 
 moveSpeed = baseSpeed / 2;
 alarm[1] = room_speed / 2;
