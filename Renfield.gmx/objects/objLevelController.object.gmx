@@ -28,6 +28,10 @@
             <string>/// Initialization
 randomize();
 
+gameOver = false;
+gamePaused = false;
+pauseTimeInCycle = 0;
+
 dayDuration = 45;
 nightDuration = 15;
 minWeaponSpawnY = room_height / 2;
@@ -202,6 +206,79 @@ alarm[2] = nightDuration * room_speed;
             <kind>1</kind>
             <string>/// Destroy
 instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset game
+
+/*
+if (keyboard_check(vk_escape))
+{
+    if (gamePaused)
+    {
+        gamePaused = false;
+        if (roundController.cycle == DAY)
+        {
+            alarm[1] = pauseTimeInCycle;
+        }
+        else
+        {
+            alarm[2] = pauseTimeInCycle;
+        }
+        
+        with (objEnemy)
+        {
+            walking = true;
+        }
+        pauseTimeInCycle = 0;
+    }
+    else
+    {
+        gamePaused = true;
+        if (roundController.cycle == DAY)
+        {
+            alarm[1] = pauseTimeInCycle;
+        }
+        else
+        {
+            alarm[2] = pauseTimeInCycle;
+        }
+        
+        with (objEnemy)
+        {
+            walking = false;
+        }
+        pauseTimeInCycle = 0;
+    }
+} 
+else 
+{
+*/
+    if (gameOver &amp;&amp; keyboard_check(vk_anykey))
+    {
+        room_goto(rmTitle);    
+    }
+///}
+
 </string>
           </argument>
         </arguments>

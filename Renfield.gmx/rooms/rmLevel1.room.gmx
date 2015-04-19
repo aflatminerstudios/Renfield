@@ -150,8 +150,8 @@
     <instance objName="objJumpThroughFloor" x="160" y="352" name="inst_3CE792D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objJumpThroughFloor" x="192" y="352" name="inst_20E8D074" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objJumpThroughFloor" x="224" y="352" name="inst_A66D2E59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="32" y="160" name="inst_E300CC3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objScoreControl" x="96" y="480" name="inst_28F6BBD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRenfield" x="-32" y="96" name="inst_875D1F57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

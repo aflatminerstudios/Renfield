@@ -28,6 +28,10 @@
             <string>/// Initialization
 randomize();
 
+gameOver = false;
+gamePaused = false;
+pauseTimeInCycle = 0;
+
 dayDuration = 45;
 nightDuration = 15;
 minWeaponSpawnY = room_height / 2;

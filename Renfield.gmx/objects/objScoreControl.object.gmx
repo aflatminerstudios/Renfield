@@ -65,6 +65,20 @@ draw_text(200, 20, "Current Turrets: " + string(numPlaced));
 draw_text(10, 50, "Enemies Killed: " + string(numKilled));
 draw_text(200, 50, "Total Turrets Placed: " + string(totalPlaced));
 
+with (objLevelController)
+{
+    if (gameOver)
+    {
+        draw_text(room_width / 2, room_height / 2, "Game Over");
+    }
+    else
+    {
+        if (gamePaused)
+        {
+            draw_text(room_width / 2, room_height / 2, "Paused");
+        }
+    }
+}
 </string>
           </argument>
         </arguments>

@@ -58,9 +58,8 @@ show_debug_message("Game over!");
 
 with (objLevelController) {
     audio_stop_sound(music);
+    gameOver = true;
 }
-
-room_goto(rmGameOver);
 </string>
           </argument>
         </arguments>
