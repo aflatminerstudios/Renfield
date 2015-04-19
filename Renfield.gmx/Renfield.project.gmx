@@ -55,11 +55,13 @@
       <script>scripts\scrPlaceFly.gml</script>
       <script>scripts\scrFlyToss.gml</script>
       <script>scripts\scrPlace.gml</script>
+      <script>scripts\scrConvertWeaponToHeld.gml</script>
       <script>scripts\scrFreeze.gml</script>
     </scripts>
     <script>scripts\scrHoldObject.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\objRenfield</object>
     <objects name="Weapons">
       <object>objects\objFly</object>
       <object>objects\objShot</object>
@@ -98,7 +100,6 @@
     <objects name="Blocks">
       <object>objects\objJumpThroughFloor</object>
       <object>objects\objParentFloor</object>
-      <object>objects\objRenfield</object>
       <object>objects\objSolidFloor</object>
     </objects>
   </objects>

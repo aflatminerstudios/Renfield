@@ -35,6 +35,8 @@ maxVelocity = 30;
 horizMvt = 3;
 
 vertSpeed = 0;
+
+heldWeapon = noone;
 </string>
           </argument>
         </arguments>
@@ -57,12 +59,7 @@ vertSpeed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check player controls and check wall/floor collisions
-
-var strGround = "Not on Ground";
-if(onGround) strGround = "On Ground";
-show_debug_message("1) Renfield loc: (" + string(x) + ", " + string(y) + "), vertSpeed: " + string(vertSpeed) + ", " + strGround);
-
+            <string>/// Check player movement and check wall/floor collisions
 
 var proposedXMvt = 0;
 var proposedYMvt = 0;
@@ -137,39 +134,80 @@ if(vCollide != noone) {
 }
 
 y += vertSpeed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Check action button and down key
 
+var actionPressed = keyboard_check_pressed(ord('z')) ||
+                    keyboard_check_pressed(ord('x')) ||
+                    keyboard_check_pressed(ord('c')) ||
+                    keyboard_check_pressed(vk_control);
+                    
+var downPressed = keyboard_check_pressed(vk_down);
 
+var holdingWeapon = (heldWeapon != noone);
 
-/*
-if(place_meeting(x, y + 1, objParentFloor)){
-  if(vertSpeed &gt;= 0){
-    onGround = true;
-    //gravity = 0;
+if(actionPressed){
+  if(!holdingWeapon) {
+    // attempt to pick up weapon if touching one
+    var weapon = instance_place(x,y,objWeapon);
+    if(weapon != noone){
+      if(object_get_parent(weapon) != objWeaponHeld) {
+        heldWeapon = weapon;
+        scrConvertWeaponToHeld(weapon.id);
+      }
+    }
   }
-  
-  if(keyboard_check_pressed(vk_space)){
-      vertSpeed = -jumpVelocity;
-      onGround = false;
-  }
-  
-} else {
-  onGround = false;
 }
-*/
 
-/*
-if(!onGround){
-  vertSpeed += baseGravity;
-} else
-  vertSpeed = 0;
-*/
-/*
-if(vertSpeed &gt; maxVelocity)
-  vertSpeed = maxVelocity;
-*/
-strGround = "Not on Ground";
-if(onGround) strGround = "On Ground";
-show_debug_message("2) Renfield loc: (" + string(x) + ", " + string(y) + "), vertSpeed: " + string(vertSpeed) + ", " + strGround);
+if(holdingWeapon &amp;&amp; downPressed) {
+    // Drop weapon
+    scrPlace(heldWeapon.id);
+    heldWeapon = noone;
+  } 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Move held weapon with player
+if(heldWeapon != noone) {
+  heldWeapon.x = x + 20;
+  heldWeapon.y = y + 20;
+}
 </string>
           </argument>
         </arguments>
