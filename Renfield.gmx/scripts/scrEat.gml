@@ -19,5 +19,7 @@ if (match) {
     
     if (floor(predator.xp / (predator.xpToLevel * predator.level)) > predator.level) {
         predator.level += 1;
+        hp += 1;
+        maxHp = hp;
     }   
 }

@@ -53,6 +53,7 @@
       <script>scripts\scrFlyToss.gml</script>
       <script>scripts\scrPlace.gml</script>
       <script>scripts\scrFrogShootHeld.gml</script>
+      <script>scripts\scrPlaceCat.gml</script>
       <script>scripts\scrBatScreech.gml</script>
       <script>scripts\scrFreeze.gml</script>
     </scripts>
@@ -78,6 +79,9 @@
       <object>objects\objBatPlaced</object>
       <object>objects\objBatHeld</object>
       <object>objects\objBat</object>
+      <object>objects\objCat</object>
+      <object>objects\objCatHeld</object>
+      <object>objects\objCatPlaced</object>
       <object>objects\objSoundWave</object>
     </objects>
     <object>objects\objTestControl</object>
