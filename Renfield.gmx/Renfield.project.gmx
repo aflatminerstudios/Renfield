@@ -58,6 +58,7 @@
       <script>scripts\scrFreeze.gml</script>
     </scripts>
     <script>scripts\scrHoldObject.gml</script>
+    <script>scripts\scrSpeedFromDuration.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Weapons">
