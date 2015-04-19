@@ -31,7 +31,7 @@ hp = 5;
 strength = 1;
 
 facing = 1;
-moveSpeed = room_speed / 60;
+moveSpeed = room_speed / 60 * 2;
 baseSpeed = moveSpeed;
 walking = true;
 

@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,61 +25,43 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Setup Default values
+            <string>/// Initialization
+randomize();
 
-moveSpeed = 0;
-hp = 1;
+dayDuration = 45;
+nightDuration = 15;
+maxFliesToSpawn = 10;
+maxFrogsToSpawn = 5;
+maxSpidersToSpawn = 5;
+maxBatsToSpawn = 5;
+maxCatsToSpawn = 2;
 
-xp = 0;
-xpToLevel = 0;
-givenXp = 0;
-level = 1;
 
+/// Create DayNight controller instance
+roundController = instance_create(room_width / 2, room_height, objDayNightController);
 
-tarX = x;
-tarY = y;
+/// Set day length
+roundController.daySpeed = scrSpeedFromDuration(dayDuration);
+/// Set night length
+roundController.nightSpeed = scrSpeedFromDuration(nightDuration);
+roundController.rotSpeed = roundController.nightSpeed;
 
-canEat[0] = 0;
+/// Setup paths
+path_append(pathLevel1A, pathLevel1E);
+spawnAPath = pathLevel1A;
+path_append(pathLevel1D, pathLevel1E);
+path_append(pathLevel1B, pathLevel1D);
+spawnBPath = pathLevel1B;
+path_append(pathLevel1C, pathLevel1D);
+spawnCPath = pathLevel1C;
 
-//scripts
-autoAttack = scrNull;
-playerAttack = scrNull;
-placeScript = scrNull;
+/*
+waveLength
+waveDelay
+initialize rounds
+*/
 
-//Other objects
-held = objWeaponHeld;
-base = objWeapon;
-placed = objWeaponPlaced;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="11">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Move random left and right
-
-if ((abs(x - tarX) &lt;= 10) &amp;&amp; (abs(y - tarY) &lt;= 10)) {
-    tarX = irandom(room_width);
-    tarY = irandom(room_height);
-} else {
-    move_towards_point(tarX, tarY, moveSpeed);
-}
+alarm[1] = 1;
 </string>
           </argument>
         </arguments>
@@ -102,8 +84,98 @@ if ((abs(x - tarX) &lt;= 10) &amp;&amp; (abs(y - tarY) &lt;= 10)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Reset shot variable, if it exists
-shot = false;
+            <string>/// Day Cycles
+
+switch (roundController.roundCount)
+{
+    case 0:
+        wave1 = scrCreateSpawner(objBatteringRam, 5, 1, 2, spawnAPath);
+        wave2 = scrCreateSpawner(objPitchforker, 7, 1, 3, spawnBPath);
+        wave3 = scrCreateSpawner(objPeasant, 11, 1, 2, spawnCPath);
+        wave4 = scrCreateSpawner(objHelsing, 2, 100, 5, spawnCPath);
+        break;
+    case 1:
+        wave1 = scrCreateSpawner(objHelsing, 5, 1, 2, spawnAPath);
+        break;
+}
+alarm[1] = dayDuration * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Night Cycles
+
+/// Remove all unplaced weapons
+with (objWeapon)
+{
+    if ((object_get_parent(object_index) != objWeaponPlaced) &amp;&amp; (object_get_parent(object_index) != objWeaponHeld))
+    {
+        alarm[0] = 1;
+    }
+}
+
+/// Spawn new weapons
+intFlyCount = irandom(maxFliesToSpawn);
+intFrogCount = irandom(maxFrogsToSpawn);
+intSpiderCount = irandom(maxSpidersToSpawn);
+intBatCount = irandom(maxBatsToSpawn);
+intCatCount = irandom(maxCatsToSpawn);
+
+for(i = 0; i &lt; intFlyCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objFly);
+}
+
+for(i = 0; i &lt; intFrogCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objFrog);
+}
+
+for(i = 0; i &lt; intSpiderCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objSpider);
+}
+
+for(i = 0; i &lt; intBatCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objBat);
+}
+
+for(i = 0; i &lt; intCatCount; i++)
+{
+    spawnX = irandom(room_width);
+    spawnY = irandom(room_height);
+    instance_create(spawnX, spawnY, objCat);
+}
+
+
+alarm[2] = nightDuration * room_speed;
 </string>
           </argument>
         </arguments>
@@ -126,64 +198,8 @@ shot = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy object
-
+            <string>/// Destroy
 instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Move
-
-
-//Set alarm for move
-if (alarm[11] &lt;= 0) {
-    alarm[11] = 1;
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objWeapon">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Call eat script
-
-scrEat(self.id, other.id);
 </string>
           </argument>
         </arguments>

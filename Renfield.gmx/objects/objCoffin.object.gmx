@@ -77,9 +77,10 @@ instance_destroy();
             <kind>1</kind>
             <string>/// Check if dead
 
-if (hp == 0)
+if (hp &lt;= 0)
 {
     show_debug_message("Game over!");
+    room_goto(rmGameOver);
     alarm[0] = 1;
 }
 </string>
