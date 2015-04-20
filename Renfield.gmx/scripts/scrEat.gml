@@ -17,9 +17,13 @@ if (match) {
         prey.alarm[0] = 1;
     }
     
-    if (floor(predator.xp / (predator.xpToLevel * predator.level)) > predator.level) {
+    if (floor(predator.xp / (predator.xpToLevel * predator.level)) >= predator.level) {
         predator.level += 1;
         hp += 1;
         maxHp = hp;
+        
+        var text = instance_create(predator.x, predator.y, objMiniStatusIndicator);
+        text.text = "Level " + string(predator.level);
+        text.color = c_orange;
     }   
 }

@@ -34,7 +34,7 @@ canEat[1] = objFlyPlaced;
 canEat[2] = objSpider;
 canEat[3] = objSpiderPlaced;
 xp = 0;
-xpToLevel = 10;
+xpToLevel = 5;
 givenXp = 5;
 
 level = 1;
