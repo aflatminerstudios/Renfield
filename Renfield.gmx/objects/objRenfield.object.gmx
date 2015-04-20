@@ -363,7 +363,7 @@ var downPressed = keyboard_check_pressed(vk_down);
 
 var eatPressed = keyboard_check_pressed(ord('E'));
 
-var holdingWeapon = (heldWeapon != noone);
+var holdingWeapon = (heldWeapon != noone) &amp;&amp; instance_exists(heldWeapon);
 
 if (eatPressed &amp;&amp; holdingWeapon) {
         scrRenfieldEat(self.id);   
