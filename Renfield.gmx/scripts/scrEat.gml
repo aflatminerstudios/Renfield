@@ -17,6 +17,7 @@ if (match) {
     with (prey) {
         prey.alarm[0] = 1;
     }
+    audio_play_sound(sndChomp,0,false);
     
     if (floor(predator.xp / (predator.xpToLevel * predator.level)) >= predator.level) {
         predator.level += 1;

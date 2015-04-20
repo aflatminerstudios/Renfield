@@ -7,6 +7,8 @@
   <sounds name="sound">
     <sound>sound\sndGameplayMusic</sound>
     <sound>sound\sndTitleMusic</sound>
+    <sound>sound\sndRenfieldCommand</sound>
+    <sound>sound\sndChomp</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprRenfield</sprite>
