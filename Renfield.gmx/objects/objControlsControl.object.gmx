@@ -32,7 +32,7 @@ draw_set_halign(fa_center);
 draw_text(400, 50, "Use left/right arrow keys to move");
 draw_text(400, 100, "Use down arrow to pick up/place animals");
 draw_text(400, 150, "Ctrl picks up and uses animals");
-draw_text(400, 200, "Q eats the currently held animal (and restores Renfield's stamina)");
+draw_text(400, 200, "E eats the currently held animal (and restores Renfield's stamina)");
 draw_text(400, 250, "Stop the villagers from killing the sleeping Dracula!");
 
 draw_text(400, 300, "Food Chain");

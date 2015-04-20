@@ -47,7 +47,7 @@ maxBatsToSpawn = 4;
 minFrogsToSpawn = 1;
 maxFrogsToSpawn = 2;
 minCatsToSpawn = 0;
-maxCatsToSpawn = 4;
+maxCatsToSpawn = 3;
 
 /// Create DayNight controller instance
 roundController = instance_create(room_width / 2, room_height, objDayNightController);

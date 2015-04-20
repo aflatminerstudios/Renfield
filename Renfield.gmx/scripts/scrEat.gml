@@ -20,8 +20,8 @@ if (match) {
     
     if (floor(predator.xp / (predator.xpToLevel * predator.level)) >= predator.level) {
         predator.level += 1;
-        hp += 1;
-        maxHp = hp;
+        hp += 5;
+        maxHp += 5;
         
         var text = instance_create(predator.x, predator.y, objMiniStatusIndicator);
         text.text = "Level " + string(predator.level);

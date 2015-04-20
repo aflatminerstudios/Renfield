@@ -31,7 +31,7 @@ var shot = instance_create(x, y, objWeb);
 
 with (shot) {
     move_towards_point(x + (100 * other.facing), y, speed); 
-    damage = 2 * other.level;
+    damage = 2 * other.level * other.level;
 }
 </string>
           </argument>
