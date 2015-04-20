@@ -38,12 +38,18 @@
     <sprite>sprites\sprBash</sprite>
     <sprites name="BackgroundSprites">
       <sprite>sprites\sprBgSky</sprite>
+      <sprite>sprites\sprBgSkyDay</sprite>
       <sprite>sprites\sprBgClouds</sprite>
+      <sprite>sprites\sprBgCloudsDay</sprite>
       <sprite>sprites\sprBgMidground</sprite>
+      <sprite>sprites\sprBgMidgroundDay</sprite>
       <sprite>sprites\sprBgCastleMountain</sprite>
+      <sprite>sprites\sprBgCastleMountainDay</sprite>
       <sprite>sprites\sprBgCastleInside</sprite>
+      <sprite>sprites\sprBgCastleInsideDay</sprite>
     </sprites>
     <sprite>sprites\sprLogo</sprite>
+    <sprite>sprites\sprBgGround</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">

@@ -29,7 +29,7 @@
 
 cycle = NIGHT;
 
-moonDistance = -500; 
+moonDistance = -500;
 sunDistance = 400;
 
 sun = instance_create(x, y + sunDistance, objSun);
