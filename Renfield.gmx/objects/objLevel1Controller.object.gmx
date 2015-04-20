@@ -41,11 +41,11 @@ xBuffer = 20;
 minFliesToSpawn = 8;
 maxFliesToSpawn = 12;
 minSpidersToSpawn = 1;
-maxSpidersToSpawn = 4;
+maxSpidersToSpawn = 6;
 minBatsToSpawn = 1;
-maxBatsToSpawn = 4;
-minFrogsToSpawn = 1;
-maxFrogsToSpawn = 2;
+maxBatsToSpawn = 6;
+minFrogsToSpawn = 3;
+maxFrogsToSpawn = 6;
 minCatsToSpawn = 0;
 maxCatsToSpawn = 3;
 

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1024</width>
   <height>768</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -57,7 +57,7 @@
     <instance objName="objBgMidground" x="0" y="0" name="inst_50C9928A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBgCastleMountain" x="0" y="0" name="inst_6A208FDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBgCastleInside" x="0" y="0" name="inst_DA27DD90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objCoffin" x="992" y="704" name="inst_6EF59B78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objCoffin" x="996" y="684" name="inst_6EF59B78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLevel1Controller" x="0" y="0" name="inst_485964DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSolidFloor" x="32" y="736" name="inst_A4101A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSolidFloor" x="96" y="736" name="inst_93EC7823" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
