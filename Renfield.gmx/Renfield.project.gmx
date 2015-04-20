@@ -146,9 +146,11 @@
     <object>objects\objSpineAssister</object>
     <object>objects\objScoreControl</object>
     <object>objects\objBash</object>
+    <object>objects\objControlsControl</object>
     <object>objects\objMiniStatusIndicator</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmControls</room>
     <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>

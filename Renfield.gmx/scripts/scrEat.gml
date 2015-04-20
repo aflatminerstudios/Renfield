@@ -13,6 +13,7 @@ for (var i = 0; i < array_length_1d(predator.canEat); ++i) {
 
 if (match) {
     predator.xp += prey.xp + prey.givenXp;
+    predator.hp = min(predator.hp + prey.hp, predator.maxHp);
     with (prey) {
         prey.alarm[0] = 1;
     }
