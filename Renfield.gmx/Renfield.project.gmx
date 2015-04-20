@@ -35,6 +35,7 @@
     </sprites>
     <sprite>sprites\sprLadder</sprite>
     <sprite>sprites\sprBash</sprite>
+    <sprite>sprites\sprLogo</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -148,14 +149,15 @@
     <object>objects\objBash</object>
     <object>objects\objControlsControl</object>
     <object>objects\objMiniStatusIndicator</object>
+    <object>objects\objLogo</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmTitle</room>
     <room>rooms\rmControls</room>
     <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\roomTestMicha</room>
-    <room>rooms\rmTitle</room>
     <room>rooms\rmGameOver</room>
   </rooms>
   <constants number="5">
