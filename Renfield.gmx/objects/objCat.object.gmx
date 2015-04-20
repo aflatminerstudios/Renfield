@@ -29,14 +29,14 @@
 
 facing = false;
 moveSpeed = room_speed / 8;
-canEat[0] = objFly;
-canEat[1] = objFlyPlaced;
-canEat[2] = objSpider;
-canEat[3] = objSpiderPlaced;
-canEat[4] = objFrog;
-canEat[5] = objFrogPlaced;
-canEat[6] = objBat;
-canEat[7] = objBatPlaced;
+//canEat[0] = objFly;
+//canEat[1] = objFlyPlaced;
+canEat[0] = objSpider;
+canEat[1] = objSpiderPlaced;
+canEat[2] = objFrog;
+canEat[3] = objFrogPlaced;
+canEat[4] = objBat;
+canEat[5] = objBatPlaced;
 xp = 0;
 xpToLevel = 5;
 givenXp = 5;

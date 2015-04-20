@@ -32,9 +32,9 @@ gameOver = false;
 gamePaused = false;
 pauseTimeInCycle = 0;
 
-dayDuration = 45;
+dayDuration = 40;
 nightDuration = 25;
-minWeaponSpawnY = room_height / 2;
+minWeaponSpawnY = 0;
 maxWeaponSpawnY = room_height - 50;
 xBuffer = 20;
 
@@ -44,10 +44,10 @@ minSpidersToSpawn = 1;
 maxSpidersToSpawn = 4;
 minBatsToSpawn = 1;
 maxBatsToSpawn = 4;
-minFrogsToSpawn = 1;
-maxFrogsToSpawn = 2;
-minCatsToSpawn = 0;
-maxCatsToSpawn = 3;
+minFrogsToSpawn = 4;
+maxFrogsToSpawn = 8;
+minCatsToSpawn = 1;
+maxCatsToSpawn = 4;
 
 /// Create DayNight controller instance
 roundController = instance_create(room_width / 2, room_height, objDayNightController);
@@ -59,16 +59,26 @@ roundController.nightSpeed = scrSpeedFromDuration(nightDuration);
 roundController.rotSpeed = roundController.nightSpeed;
 
 /// Setup paths
-path_append(pathLevel1A, pathLevel1E);
-spawnAPath = pathLevel1A;
-path_append(pathLevel1D, pathLevel1E);
-path_append(pathLevel1B, pathLevel1D);
-spawnBPath = pathLevel1B;
-path_append(pathLevel1C, pathLevel1D);
-spawnCPath = pathLevel1C;
+/*path_append(pathLevel2A, pathLevel2C);
+path_append(pathLevel2A, pathLevel2D);
+spawnAPath = pathLevel2A;
+path_append(pathLevel2B, pathLevel2C);
+path_append(pathLevel2B, pathLevel2E);
+spawnBPath = pathLevel2B;*/
 
-global.music = audio_play_sound(sndGameplayMusic, 1, true);
+spawnLowerLeft = pathLevel3A;
+spawnLowerRight = pathLevel3B;
+spawnUpperLeft = pathLevel3C;
+spawnUpperRight = pathLevel3D;
+spawnUpperRightMid = pathLevel3E;
+spawnUpperLeftMid = pathLevel3F;
+spawnUpperMiddle = pathLevel3G;
+spawnUpperMiddle2 = pathLevel3H;
 
+with (objCoffin) {
+  baseHp *= 2;
+  hp *= 2;
+}
 /*
 waveLength
 waveDelay
@@ -103,48 +113,43 @@ alarm[1] = 1;
 switch (roundController.roundCount)
 {
     case 0:
-        spawn1 = scrCreateSpawner(objPeasant, 20, 10, 1, spawnBPath);
+        wave1 = scrCreateSpawner(objPeasant, 20, 1, 2, spawnLowerLeft);
+        wave2 = scrCreateSpawner(objPitchforker, 20, 1, 2, spawnLowerRight);
         break;
     case 1:
-        spawn1 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnBPath);
-        spawn2 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnAPath);
+        wave1 = scrCreateSpawner(objPeasant, 20, 1, 2, spawnLowerLeft);
+        wave2 = scrCreateSpawner(objPitchforker, 20, 1, 2, spawnLowerRight);
+        wave3 = scrCreateSpawner(objPeasant, 20, room_speed * 5, 2, spawnUpperLeft);
+        wave4 = scrCreateSpawner(objPeasant, 20, room_speed * 5, 2, spawnUpperRight);
         break;
     case 2:
-        spawn1 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnBPath);
-        spawn2 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnAPath);
-        spawn3 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnCPath);
+        wave1 = scrCreateSpawner(objPeasant, 10, 1, 2, spawnUpperLeft);
+        wave2 = scrCreateSpawner(objPitchforker, 10, 1, 2, spawnUpperRight);
+        wave3 = scrCreateSpawner(objPeasant, 5, 1, 4, spawnLowerLeft);
+        wave4 = scrCreateSpawner(objPitchforker, 5, 1, 4, spawnLowerRight);
+        wave5 = scrCreateSpawner(objKnight, 5, room_speed * 5, 4, spawnUpperMiddle);
+        wave6 = scrCreateSpawner(objKnight, 5, room_speed * 5, 4, spawnUpperMiddle2);
         break;
     case 3:
-        spawn1 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnBPath);
-        spawn2 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnAPath);
-        spawn3 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnCPath);
+        wave1 = scrCreateSpawner(objHelsing, 5, 1, 10, spawnUpperLeft);
+        wave2 = scrCreateSpawner(objHelsing, 5, 1, 10, spawnLowerRight);
+        wave3 = scrCreateSpawner(objPitchforker, 15, room_speed, 1, spawnUpperRightMid);
+        wave4 = scrCreateSpawner(objPitchforker, 15, room_speed, 1, spawnUpperLeftMid);
+        wave5 = scrCreateSpawner(objPeasant, 10, room_speed * 2, 2, spawnLowerLeft);
+        wave6 = scrCreateSpawner(objPeasant, 10, room_speed * 2, 2, spawnUpperRight);
         break;
     case 4:
-        spawn1 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnBPath);
-        spawn2 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnAPath);
+        wave1 = scrCreateSpawner(objHelsing, 6, room_speed, 10, spawnUpperMiddle);
+        wave2 = scrCreateSpawner(objHelsing, 6, room_speed, 10, spawnUpperMiddle2);
+        wave3 = scrCreateSpawner(objPitchforker, 10, room_speed * 2, 1, spawnUpperLeft);
+        wave4 = scrCreateSpawner(objPitchforker, 10, room_speed * 2, 1, spawnUpperRight);
+        wave5 = scrCreateSpawner(objPeasant, 20, 1, 1, spawnLowerLeft);
+        wave6 = scrCreateSpawner(objPeasant, 20, 1, 1, spawnLowerRight);
+        wave7 = scrCreateSpawner(objKnight, 5, room_speed * 5, 3, spawnUpperLeftMid);
+        wave8 = scrCreateSpawner(objKnight, 5, room_speed * 5, 3, spawnUpperRightMid)
         break;
-    case 5:
-        spawn1 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnBPath);
-        spawn2 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnAPath);
-        spawn3 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnCPath);
-        break;
-    case 6:
-      spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
-      break
-    case 7:
-      spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
-      spawn2 = scrCreateSpawner(objKnight, 5, 1, 2, spawnAPath);
-      break
-    case 8:
-      spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
-      spawn2 = scrCreateSpawner(objKnight, 5, 1, 2, spawnAPath);
-      spawn3 = scrCreateSpawner(objKnight, 5, 1, 2, spawnCPath);
-      break
-    case 9:
-      spawn1 = scrCreateSpawner(objHelsing, 5, 1, 2, spawnBPath);
     default:
-        room_goto(rmLevel3);
-        break;
+        scrGameOver();
 }
 alarm[1] = dayDuration * room_speed;
 </string>

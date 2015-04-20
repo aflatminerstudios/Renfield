@@ -3,7 +3,7 @@
   <spriteName>sprCoffin</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialization
-			baseHp = 25;
-			hp = baseHp;
-			armor = 1.0;
+baseHp = 25;
+hp = baseHp;
+armor = 1.0;
 
-			</string>
+</string>
           </argument>
         </arguments>
       </action>

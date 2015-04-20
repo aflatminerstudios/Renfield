@@ -67,6 +67,16 @@
       <path>paths\pathLevel2D</path>
       <path>paths\pathLevel2E</path>
     </paths>
+    <paths name="Level3">
+      <path>paths\pathLevel3A</path>
+      <path>paths\pathLevel3B</path>
+      <path>paths\pathLevel3C</path>
+      <path>paths\pathLevel3D</path>
+      <path>paths\pathLevel3E</path>
+      <path>paths\pathLevel3F</path>
+      <path>paths\pathLevel3G</path>
+      <path>paths\pathLevel3H</path>
+    </paths>
   </paths>
   <scripts name="scripts">
     <script>scripts\scrNull.gml</script>
@@ -151,6 +161,7 @@
       <object>objects\objLevelController</object>
       <object>objects\objLevel1Controller</object>
       <object>objects\objLevel2Controller</object>
+      <object>objects\objLevel3Controller</object>
     </objects>
     <objects name="Blocks">
       <object>objects\objJumpThroughFloor</object>
@@ -181,6 +192,7 @@
     <room>rooms\rmControls</room>
     <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
+    <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\roomTestMicha</room>
     <room>rooms\rmGameOver</room>
