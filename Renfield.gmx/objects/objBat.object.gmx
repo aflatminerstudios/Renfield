@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Setup Default values
+            <string>/*///Setup Default values
 
 facing = 1;
 moveSpeed = room_speed / 12;
@@ -71,7 +71,7 @@ vertSpeed = 0;
 
 //Animation
 heldAnimation = "";
-placedAnimation = "";
+placedAnimation = "";*/
 </string>
           </argument>
         </arguments>
@@ -124,7 +124,7 @@ onGround = false;
 facing = 1;
 waveCount = 0;
 maxWaves = 5;
-delay = 5;
+delay = 6;
 moveDist = sprite_width * 4;
 flyDist = 35;
 released = false;

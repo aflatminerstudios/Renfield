@@ -38,14 +38,14 @@ minWeaponSpawnY = room_height / 2;
 
 minFliesToSpawn = 10;
 maxFliesToSpawn = 10;
-minSpidersToSpawn = 1;
+minSpidersToSpawn = 2;
 maxSpidersToSpawn = 5;
-minBatsToSpawn = 1;
+minBatsToSpawn = 2;
 maxBatsToSpawn = 5;
-minFrogsToSpawn = 1;
-maxFrogsToSpawn = 5;
+minFrogsToSpawn = 4;
+maxFrogsToSpawn = 8;
 minCatsToSpawn = 0;
-maxCatsToSpawn = 2;
+maxCatsToSpawn = 4;
 
 
 /// Create DayNight controller instance
@@ -154,36 +154,36 @@ intCatCount = irandom_range(minCatsToSpawn, maxCatsToSpawn);
 
 for(i = 0; i &lt; intFlyCount; i++)
 {
-    spawnX = irandom(room_width);
-    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
+    spawnX = irandom(room_width - xBuffer * 2) + xBuffer;
+    spawnY = min(irandom(room_height / 2) + minWeaponSpawnY, maxWeaponSpawnY);
     instance_create(spawnX, spawnY, objFly);
 }
 
 for(i = 0; i &lt; intFrogCount; i++)
 {
-    spawnX = irandom(room_width);
-    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
+    spawnX = irandom(room_width - xBuffer * 2) + xBuffer;
+    spawnY = min(irandom(room_height / 2) + minWeaponSpawnY, maxWeaponSpawnY);
     instance_create(spawnX, spawnY, objFrog);
 }
 
 for(i = 0; i &lt; intSpiderCount; i++)
 {
-    spawnX = irandom(room_width);
-    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
+    spawnX = irandom(room_width - xBuffer * 2) + xBuffer;
+    spawnY = min(irandom(room_height / 2) + minWeaponSpawnY, maxWeaponSpawnY);
     instance_create(spawnX, spawnY, objSpider);
 }
 
 for(i = 0; i &lt; intBatCount; i++)
 {
-    spawnX = irandom(room_width);
-    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
+    spawnX = irandom(room_width - xBuffer * 2) + xBuffer;
+    spawnY = min(irandom(room_height / 2) + minWeaponSpawnY, maxWeaponSpawnY);
     instance_create(spawnX, spawnY, objBat);
 }
 
 for(i = 0; i &lt; intCatCount; i++)
 {
-    spawnX = irandom(room_width);
-    spawnY = irandom(room_height / 2) + minWeaponSpawnY;
+    spawnX = irandom(room_width - xBuffer * 2) + xBuffer;
+    spawnY = min(irandom(room_height / 2) + minWeaponSpawnY, maxWeaponSpawnY);
     instance_create(spawnX, spawnY, objCat);
 }
 

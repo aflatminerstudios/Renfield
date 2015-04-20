@@ -32,7 +32,7 @@ hp = 100;
 maxHP = 100;
 armor = 1.0;
 baseGravity = 0.3;
-jumpVelocity = 8;
+jumpVelocity = 11;
 maxVelocity = 30;
 horizMvt = 3;
 facing = 1;
@@ -40,8 +40,6 @@ facing = 1;
 vertSpeed = 0;
 
 heldWeapon = noone;
-
-alarm[11] = -50;
 
 
 scale = 0.1;
@@ -60,7 +58,7 @@ skeleton_animation_set("Idle");
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="11">
+    <event eventtype="2" enumb="8">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -78,8 +76,10 @@ skeleton_animation_set("Idle");
           <argument>
             <kind>1</kind>
             <string>///Set HP back to max hp
+
 hp = maxHP;
-alarm[11] = -50;
+alarm[8] = -50;
+
 </string>
           </argument>
         </arguments>
@@ -108,6 +108,20 @@ alarm[11] = -50;
       </action>
       <action>
         <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -122,13 +136,78 @@ alarm[11] = -50;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (alarm[11] &lt; 0) {
+            <string>///Check for falling
+
+vertSpeed += baseGravity;
+
+if(vertSpeed &gt; maxVelocity)
+  vertSpeed = maxVelocity;
+
+
+var vCollide;
+vCollide = instance_place(x, y+vertSpeed, objParentFloor);
+if(vCollide != noone) {
+  if(vCollide.wallType == SOLIDFLOOR) {
+    while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+      y += sign(vertSpeed);
+    vertSpeed = 0;
+    onGround = true;
+  }
+  if ((vCollide.wallType == JUMPTHROUGHFLOOR) &amp;&amp; sign(vertSpeed) == 1) {
+    if(!place_meeting(x,y,objParentFloor)) {
+      while(!place_meeting(x,y+sign(vertSpeed),objParentFloor))
+        y += 1;
+      vertSpeed = 0;
+      onGround = true;
+    } 
+  }
+} else {
+  onGround = false;
+}
+
+y += vertSpeed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Freeze Renfield temporarliy
+if (alarm[8] &lt; 0) {
     skeleton_animation_set("Idle");
-    alarm[11] = room_speed * 5;
+    alarm[8] = room_speed * 5;
 }
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -280,12 +359,12 @@ var actionPressed = keyboard_check_pressed(ord('Z')) ||
                     
 var downPressed = keyboard_check_pressed(vk_down);
 
-var eatPressed = keyboard_check_pressed(ord('Q'));
+var eatPressed = keyboard_check_pressed(ord('E'));
 
 var holdingWeapon = (heldWeapon != noone);
 
 if (eatPressed &amp;&amp; holdingWeapon) {
-    scrRenfieldEat(self.id);   
+        scrRenfieldEat(self.id);   
 }
 
 if(actionPressed){
@@ -340,7 +419,7 @@ if(actionPressed){
             <string>/// Move held weapon with player
 if(heldWeapon != noone &amp;&amp; instance_exists(heldWeapon)) {
   heldWeapon.x = x + 20;
-  heldWeapon.y = y;
+  heldWeapon.y = y - 50;
   heldWeapon.facing = facing;
 }
 </string>

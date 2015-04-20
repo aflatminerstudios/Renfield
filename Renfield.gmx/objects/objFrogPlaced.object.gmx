@@ -31,7 +31,7 @@ var shot = instance_create(x, y, objShot);
 
 with (shot) {
     move_towards_point(x + (100 * other.facing), y, speed); 
-    damage = 4 * other.level;
+    damage = 4 * other.level * other.level;
 }
 </string>
           </argument>

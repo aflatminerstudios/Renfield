@@ -13,13 +13,18 @@ for (var i = 0; i < array_length_1d(predator.canEat); ++i) {
 
 if (match) {
     predator.xp += prey.xp + prey.givenXp;
+    predator.hp = min(predator.hp + prey.hp, predator.maxHp);
     with (prey) {
         prey.alarm[0] = 1;
     }
     
-    if (floor(predator.xp / (predator.xpToLevel * predator.level)) > predator.level) {
+    if (floor(predator.xp / (predator.xpToLevel * predator.level)) >= predator.level) {
         predator.level += 1;
-        hp += 1;
-        maxHp = hp;
+        hp += 5;
+        maxHp += 5;
+        
+        var text = instance_create(predator.x, predator.y, objMiniStatusIndicator);
+        text.text = "Level " + string(predator.level);
+        text.color = c_orange;
     }   
 }

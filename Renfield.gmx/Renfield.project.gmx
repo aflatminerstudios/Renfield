@@ -42,6 +42,7 @@
       <sprite>sprites\sprBgCastleMountain</sprite>
       <sprite>sprites\sprBgCastleInside</sprite>
     </sprites>
+    <sprite>sprites\sprLogo</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -126,6 +127,7 @@
       <object>objects\objKnight</object>
       <object>objects\objPeasant</object>
       <object>objects\objPitchforker</object>
+      <object>objects\objAxman</object>
       <object>objects\objBatteringRam</object>
       <object>objects\objHelsing</object>
     </objects>
@@ -152,6 +154,7 @@
     <object>objects\objSpineAssister</object>
     <object>objects\objScoreControl</object>
     <object>objects\objBash</object>
+    <object>objects\objControlsControl</object>
     <object>objects\objMiniStatusIndicator</object>
     <objects name="BackgroundHandlers">
       <object>objects\objBgSky</object>
@@ -160,13 +163,17 @@
       <object>objects\objBgCastleMountain</object>
       <object>objects\objBgCastleInside</object>
     </objects>
+    <object>objects\objLogo</object>
+    <object>objects\objCreditsControl</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmTitle</room>
+    <room>rooms\rmCredits</room>
+    <room>rooms\rmControls</room>
     <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\roomTestMicha</room>
-    <room>rooms\rmTitle</room>
     <room>rooms\rmGameOver</room>
   </rooms>
   <constants number="5">
