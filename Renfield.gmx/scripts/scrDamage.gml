@@ -8,4 +8,6 @@ with (instance) {
     if (hp <= 0) {
         alarm[0] = 1;
     }   
+    
+    instance_create(x, y - 5, objBash);
 }
