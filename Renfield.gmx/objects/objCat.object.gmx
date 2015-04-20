@@ -155,6 +155,8 @@ tarX = x + sprite_width * 3 * dir;
             <string>///Call parent event
 
 event_inherited();
+
+baseHp = maxHp;
 </string>
           </argument>
         </arguments>

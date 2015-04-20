@@ -29,6 +29,7 @@
 
 moveSpeed = 0;
 hp = 1;
+baseHp = hp;
 armor = 1.0;
 
 xp = 0;
@@ -186,6 +187,35 @@ if (alarm[11] &lt;= 0) {
             <string>///Call eat script
 
 scrEat(self.id, other.id);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw self and healthbar if necessary
+draw_self();
+if(hp &lt; maxHp) {
+  var barX = x;// - sprite_xoffset;
+  var barY = y - sprite_yoffset - 2;
+  scrDrawHealthBar(barX,barY,hp/maxHp,c_green);
+}
 </string>
           </argument>
         </arguments>

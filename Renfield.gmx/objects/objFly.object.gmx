@@ -36,6 +36,7 @@ givenXp = 2;
 level = 1;
 hp = 4 + level;
 armor = 1.0;
+maxHp = hp;
 tarX = x;
 tarY = y;
 
