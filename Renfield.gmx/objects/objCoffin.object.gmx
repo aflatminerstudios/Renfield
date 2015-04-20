@@ -55,13 +55,7 @@
             <string>///Game Over
 
 show_debug_message("Game over!");
-
-with (objLevelController) {
-    if(audio_is_playing(sndGameplayMusic))
-      audio_stop_sound(global.music);
-    gameOver = true;
-    scrCleanUp();
-}
+scrGameOver();
 </string>
           </argument>
         </arguments>
