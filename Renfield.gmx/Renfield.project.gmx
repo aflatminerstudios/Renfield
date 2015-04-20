@@ -56,6 +56,7 @@
     <script>scripts\scrNull.gml</script>
     <script>scripts\scrCreate.gml</script>
     <script>scripts\scrDamage.gml</script>
+    <script>scripts\scrCleanUp.gml</script>
     <scripts name="Enemies">
       <script>scripts\scrSpawnEnemy.gml</script>
       <script>scripts\scrEnemyAttack.gml</script>
