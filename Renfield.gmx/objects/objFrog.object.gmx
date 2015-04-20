@@ -28,7 +28,7 @@
             <string>///Setup Default values
 
 facing = 1;
-moveSpeed = room_speed / 12;
+moveSpeed = room_speed / 15;
 canEat[0] = objFly;
 canEat[1] = objFlyPlaced;
 canEat[2] = objSpider;
