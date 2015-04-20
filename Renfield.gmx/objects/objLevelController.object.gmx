@@ -152,6 +152,7 @@ intBatCount = irandom_range(minBatsToSpawn, maxBatsToSpawn);
 intFrogCount = irandom_range(minFrogsToSpawn, maxFrogsToSpawn);
 intCatCount = irandom_range(minCatsToSpawn, maxCatsToSpawn);
 
+
 for(i = 0; i &lt; intFlyCount; i++)
 {
     spawnX = irandom(room_width - xBuffer * 2) + xBuffer;
