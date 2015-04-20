@@ -124,7 +124,7 @@ alarm[11] = -50;
             <kind>1</kind>
             <string>if (alarm[11] &lt; 0) {
     skeleton_animation_set("Idle");
-    alarm[11] = room_speed * 2;
+    alarm[11] = room_speed * 5;
 }
 </string>
           </argument>
@@ -431,6 +431,35 @@ if (heldWeapon != noone) {
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw self and healthbar if necessary
+draw_self();
+if(hp &lt; maxHP) {
+  var barX = x;// - sprite_xoffset;
+  var barY = y - sprite_yoffset - 2;
+  scrDrawHealthBar(barX,barY,hp/maxHP,c_yellow);
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

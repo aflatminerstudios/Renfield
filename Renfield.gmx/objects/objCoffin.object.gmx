@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialization
-baseHp = 25;
-hp = baseHp;
-armor = 1.0;
+			baseHp = 25;
+			hp = baseHp;
+			armor = 1.0;
 
-</string>
+			</string>
           </argument>
         </arguments>
       </action>
@@ -58,8 +58,9 @@ show_debug_message("Game over!");
 
 with (objLevelController) {
     if(audio_is_playing(sndGameplayMusic))
-      audio_stop_sound(music);
+      audio_stop_sound(global.music);
     gameOver = true;
+    scrCleanUp();
 }
 </string>
           </argument>

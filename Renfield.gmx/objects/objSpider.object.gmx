@@ -36,12 +36,14 @@ xpToLevel = 10;
 givenXp = 4;
 level = 1;
 hp = 4 + level;
+baseHp = hp;
 armor = 1.0;
 tarX = x;
 tarY = y;
 
 placed = false;
 held = false;
+onGround = false;
 
 //scripts
 autoAttack = scrSpiderShoot;

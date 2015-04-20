@@ -27,6 +27,73 @@
             <kind>1</kind>
             <string>///Setup Default values
 
+facing = 1;
+moveSpeed = room_speed / 12;
+canEat[0] = objFly;
+canEat[1] = objFlyPlaced;
+canEat[2] = objSpider;
+canEat[3] = objSpiderPlaced;
+xp = 0;
+xpToLevel = 10;
+givenXp = 5;
+
+level = 1;
+hp = 9 + level;
+maxHp = hp;
+armor = 1.0;
+
+placed = false;
+held = false;
+onGround = false;
+tarX = x;
+tarY = y;
+
+
+//scripts
+autoAttack = scrFrogShoot;
+playerAttack = scrFrogShootHeld;
+placeScript = scrPlace;
+
+//objects
+placed = objFrogPlaced;
+held = objFrogHeld;
+base = objFrog;
+
+//Specific variables
+jumping = false;
+dir = 1;
+shot = false;
+
+//For ground movement
+baseGravity = GRAVITY;
+maxVelocity = 30;
+vertSpeed = 0;
+
+//Animation
+heldAnimation = "";
+placedAnimation = "";
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Setup Default values
+
 moveSpeed = room_speed / 30;
 canEat[0] = objFly;
 canEat[1] = objFlyPlaced;
@@ -37,6 +104,7 @@ xpToLevel = 10;
 givenXp = 5;
 level = 1;
 hp = 9 + level;
+maxHp = hp;
 armor = 1.0;
 tarX = x;
 tarY = y;
@@ -50,6 +118,7 @@ placeScript = scrPlaceBat;
 base = objBat;
 placed = objBatPlaced;
 held = objBatHeld;
+onGround = false;
 
 //For this object
 facing = 1;

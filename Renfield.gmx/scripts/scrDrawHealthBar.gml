@@ -7,6 +7,12 @@ var yCenter = argument1;
 var percent = argument2;
 var color = argument3;
 
+if(percent < 0)
+  percent = 0;
+if(percent > 1)
+  percent = 1;
+
+// Built in settings
 var barWidth = 32;
 var barHeight = 4;
 var borderWidth = 1;
@@ -21,10 +27,6 @@ var yBottom = yCenter + barHeight/2;
 var healthBarLeft = xLeft+borderWidth;
 var healthBarRight = (xRight-xLeft - borderWidth*2)*percent + healthBarLeft;
 
-if(percent < 0)
-  percent = 0;
-if(percent > 1)
-  percent = 1;
 
 if(rounded){
   // narrow box

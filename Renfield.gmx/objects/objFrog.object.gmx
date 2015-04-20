@@ -36,13 +36,18 @@ canEat[3] = objSpiderPlaced;
 xp = 0;
 xpToLevel = 10;
 givenXp = 5;
+
 level = 1;
 hp = 9 + level;
+maxHp = hp;
 armor = 1.0;
+
 placed = false;
 held = false;
+onGround = false;
 tarX = x;
 tarY = y;
+
 
 //scripts
 autoAttack = scrFrogShoot;

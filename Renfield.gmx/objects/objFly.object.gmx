@@ -36,11 +36,13 @@ givenXp = 2;
 level = 1;
 hp = 4 + level;
 armor = 1.0;
+maxHp = hp;
 tarX = x;
 tarY = y;
 
 placed = false;
 held = false;
+onGround = false;
 
 vertSpeed = 0;
 baseGravity = 0;
