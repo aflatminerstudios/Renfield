@@ -108,7 +108,7 @@ numPlaced = instance_number(objWeaponPlaced);
             <kind>1</kind>
             <string>///Draw scores
 var offset;
-
+draw_set_halign(fa_left);
 draw_set_font(fntPoints);
 draw_set_color(c_dkgray);
 offset = 1;
@@ -134,7 +134,16 @@ with (objLevelController)
 {
     if (gameOver)
     {
-        draw_text(room_width / 2, room_height / 2, "Game Over");
+        draw_set_font(fntBlackAdder64);
+        draw_set_halign(fa_center);
+        draw_set_color(c_dkgray);
+        
+        offset = -1;
+        draw_text(800 / 2 + offset, 600 / 2 + offset, "Game Over");
+        offset = -1;
+        draw_text(800/2 + offset, 600/2 + offset, "Game Over");
+        draw_set_color(c_maroon);
+        draw_text(800 / 2 + offset, 600 / 2 + offset, "Game Over");
     }
     else
     {

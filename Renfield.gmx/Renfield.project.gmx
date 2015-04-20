@@ -96,6 +96,8 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fntPoints</font>
+    <font>fonts\fntBlackAdder32</font>
+    <font>fonts\fntBlackAdder64</font>
   </fonts>
   <objects name="objects">
     <object>objects\objRenfield</object>
