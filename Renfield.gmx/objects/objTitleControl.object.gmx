@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>music = audio_play_sound(sndTitleMusic, 1, true);
+            <string>if(!audio_is_playing(sndTitleMusic))
+  audio_play_sound(sndTitleMusic, 1, true);
 </string>
           </argument>
         </arguments>
@@ -101,7 +102,8 @@ draw_set_halign(fa_left);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_stop_sound(music);
+            <string>if(audio_is_playing(sndTitleMusic))
+  audio_stop_sound(sndTitleMusic);
 room_goto(rmControls);
 </string>
           </argument>

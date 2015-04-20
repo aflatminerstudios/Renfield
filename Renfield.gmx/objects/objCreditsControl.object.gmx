@@ -31,14 +31,14 @@ draw_set_color(c_white);
 draw_set_halign(fa_center);
 
 
-draw_text(400, 550, "Press space to return to title...");
+draw_text(400, 550, "Press any key to return to title...");
 draw_set_halign(fa_left);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="32">
+    <event eventtype="9" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>

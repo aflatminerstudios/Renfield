@@ -13,6 +13,7 @@
     <sprite>sprites\sprCoffin</sprite>
     <sprites name="Weapons">
       <sprite>sprites\sprFrog</sprite>
+      <sprite>sprites\sprFrogShoot</sprite>
       <sprite>sprites\sprShot</sprite>
       <sprite>sprites\sprWeb</sprite>
       <sprite>sprites\sprFly</sprite>

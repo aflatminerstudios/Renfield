@@ -280,7 +280,10 @@ else
 {
 */
     if (gameOver &amp;&amp; keyboard_check(vk_anykey))
-    {
+    {   
+        with(objScoreControl){
+          instance_destroy();
+        }
         room_goto(rmTitle);    
     }
 ///}
