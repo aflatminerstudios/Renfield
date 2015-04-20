@@ -33,9 +33,9 @@ gamePaused = false;
 pauseTimeInCycle = 0;
 
 dayDuration = 45;
-nightDuration = 15;
+nightDuration = 25;
 minWeaponSpawnY = room_height / 2
-maxWeaponSpawnY = room_height - 20;
+maxWeaponSpawnY = room_height - 50;
 xBuffer = 20;
 
 minFliesToSpawn = 10;

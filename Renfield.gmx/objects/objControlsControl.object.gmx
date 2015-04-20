@@ -41,16 +41,16 @@ draw_line(350, 315, 450, 315);
 draw_set_valign(fa_middle);
 draw_text(400,350,"Fly");
 draw_arrow(400,370,400,415,10);
-draw_arrow(400,370,210,415,10);
-draw_arrow(400,370,590,415,10);
-draw_text(200,425,"Frog");
-draw_arrow(375, 425, 220, 425, 10);
+draw_arrow(400,370,210,445,10);
+draw_arrow(400,370,590,445,10);
+draw_text(200,455,"Frog");
+draw_arrow(370, 425, 220, 455, 10);
 draw_text(400,425,"Spider");
-draw_arrow(425, 425, 580, 425, 10);
-draw_text(600,425,"Bat");
-draw_arrow(200,445,380,500,10);
+draw_arrow(430, 425, 580, 455, 10);
+draw_text(600,455,"Bat");
+draw_arrow(200,465,380,500,10);
 draw_arrow(400,445,400,490,10);
-draw_arrow(600,445,420,500,10);
+draw_arrow(600,465,420,500,10);
 draw_text(400,500,"Cat");
 
 

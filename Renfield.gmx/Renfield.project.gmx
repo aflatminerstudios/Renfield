@@ -150,9 +150,11 @@
     <object>objects\objControlsControl</object>
     <object>objects\objMiniStatusIndicator</object>
     <object>objects\objLogo</object>
+    <object>objects\objCreditsControl</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmTitle</room>
+    <room>rooms\rmCredits</room>
     <room>rooms\rmControls</room>
     <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
