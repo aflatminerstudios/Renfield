@@ -283,7 +283,9 @@ if(vertSpeed &gt; maxVelocity)
 if(proposedXMvt != 0) {
   if(place_meeting(x+proposedXMvt, y, objSolidFloor)) {
     while(place_meeting(x+proposedXMvt, y, objSolidFloor)){
-      x -= sign(proposedXMvt);
+      var wall = instance_place(x+proposedXMvt, y, objSolidFloor);
+      var sepDir = sign(wall.x - x);
+      x -= sepDir;//sign(proposedXMvt);
       show_debug_message("proposedXMvt &amp; x: " + string(proposedXMvt) + ", " + string(x));
     }
   }
