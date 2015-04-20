@@ -1,0 +1,83 @@
+
+pesant.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm
+  rotate: true
+  xy: 147, 2
+  size: 68, 75
+  orig: 68, 75
+  offset: 0, 0
+  index: -1
+arm copy
+  rotate: true
+  xy: 781, 92
+  size: 68, 75
+  orig: 68, 75
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 87, 12
+  size: 58, 134
+  orig: 58, 134
+  offset: 0, 0
+  index: -1
+forearm
+  rotate: false
+  xy: 228, 82
+  size: 85, 64
+  orig: 85, 64
+  offset: 0, 0
+  index: -1
+forearm copy
+  rotate: false
+  xy: 909, 151
+  size: 85, 64
+  orig: 85, 64
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 147, 72
+  size: 79, 74
+  orig: 79, 74
+  offset: 0, 0
+  index: -1
+shin
+  rotate: true
+  xy: 2, 148
+  size: 67, 321
+  orig: 67, 321
+  offset: 0, 0
+  index: -1
+shin copy
+  rotate: true
+  xy: 325, 150
+  size: 65, 322
+  orig: 65, 322
+  offset: 0, 0
+  index: -1
+thigh
+  rotate: true
+  xy: 649, 151
+  size: 64, 130
+  orig: 64, 130
+  offset: 0, 0
+  index: -1
+thigh copy
+  rotate: true
+  xy: 781, 162
+  size: 53, 126
+  orig: 53, 126
+  offset: 0, 0
+  index: -1
+torch
+  rotate: false
+  xy: 2, 10
+  size: 83, 136
+  orig: 83, 136
+  offset: 0, 0
+  index: -1

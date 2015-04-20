@@ -43,7 +43,13 @@ takeDamage = scrNull;
 
 points = 100;
 
-image_speed = 0;
+
+
+scale = 0.05;
+image_xscale = scale;
+image_yscale = scale;
+
+skeleton_animation_set("Walk");
 
 </string>
           </argument>

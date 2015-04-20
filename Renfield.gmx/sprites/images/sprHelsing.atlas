@@ -1,0 +1,83 @@
+
+pesant471.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm
+  rotate: false
+  xy: 953, 125
+  size: 68, 75
+  orig: 68, 75
+  offset: 0, 0
+  index: -1
+arm copy
+  rotate: true
+  xy: 643, 72
+  size: 68, 75
+  orig: 68, 75
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 643, 142
+  size: 58, 134
+  orig: 58, 134
+  offset: 0, 0
+  index: -1
+forearm
+  rotate: false
+  xy: 779, 136
+  size: 85, 64
+  orig: 85, 64
+  offset: 0, 0
+  index: -1
+forearm copy
+  rotate: false
+  xy: 866, 136
+  size: 85, 64
+  orig: 85, 64
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 262, 2
+  size: 61, 64
+  orig: 61, 64
+  offset: 0, 0
+  index: -1
+pitchfork
+  rotate: true
+  xy: 2, 68
+  size: 132, 318
+  orig: 132, 318
+  offset: 0, 0
+  index: -1
+shin
+  rotate: true
+  xy: 322, 143
+  size: 57, 319
+  orig: 57, 319
+  offset: 0, 0
+  index: -1
+shin copy
+  rotate: true
+  xy: 322, 84
+  size: 57, 319
+  orig: 57, 319
+  offset: 0, 0
+  index: -1
+thigh
+  rotate: true
+  xy: 2, 2
+  size: 64, 130
+  orig: 64, 130
+  offset: 0, 0
+  index: -1
+thigh copy
+  rotate: true
+  xy: 134, 13
+  size: 53, 126
+  orig: 53, 126
+  offset: 0, 0
+  index: -1
