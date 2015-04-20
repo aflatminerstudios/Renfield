@@ -85,6 +85,9 @@
     <script>scripts\scrRenfieldEat.gml</script>
     <script>scripts\scrAddLeadingZeros.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fntPoints</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objRenfield</object>
     <objects name="Weapons">
@@ -142,6 +145,7 @@
     <object>objects\objSpineAssister</object>
     <object>objects\objScoreControl</object>
     <object>objects\objBash</object>
+    <object>objects\objMiniStatusIndicator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSurfaceSetup</room>
