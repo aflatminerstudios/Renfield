@@ -183,6 +183,20 @@ if (alarm[11] &lt;= 0) {
           <argument>
             <kind>1</kind>
             <string>///Fix facing
+
+// Start of non-working section
+var facingCheck = sign(x - xprevious);
+if(x - xprevious != 0){
+  show_debug_message("Movement: " + string(x-xprevious) + ", facing: " + string(facingCheck));
+}
+
+if(facingCheck != 0)
+  facing = facingCheck;
+// End of non-working section
+  
+  
+  
+
 image_xscale = scale * facing;
 </string>
           </argument>
