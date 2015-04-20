@@ -27,13 +27,13 @@
             <kind>1</kind>
             <string>/// Initialization
 
-baseHp = 5;
+baseHp = 2;
 hp = baseHp;
 armor = 1.0;
 strength = 3;
 
 facing = 1;
-moveSpeed = room_speed / 60;
+moveSpeed = (room_speed / 60) * 2;
 baseSpeed = moveSpeed;
 walking = true;
 
