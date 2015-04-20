@@ -119,6 +119,7 @@
       <object>objects\objKnight</object>
       <object>objects\objPeasant</object>
       <object>objects\objPitchforker</object>
+      <object>objects\objAxman</object>
       <object>objects\objBatteringRam</object>
       <object>objects\objHelsing</object>
     </objects>
