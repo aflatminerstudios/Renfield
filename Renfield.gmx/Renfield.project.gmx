@@ -35,6 +35,13 @@
     </sprites>
     <sprite>sprites\sprLadder</sprite>
     <sprite>sprites\sprBash</sprite>
+    <sprites name="BackgroundSprites">
+      <sprite>sprites\sprBgSky</sprite>
+      <sprite>sprites\sprBgClouds</sprite>
+      <sprite>sprites\sprBgMidground</sprite>
+      <sprite>sprites\sprBgCastleMountain</sprite>
+      <sprite>sprites\sprBgCastleInside</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -146,6 +153,13 @@
     <object>objects\objScoreControl</object>
     <object>objects\objBash</object>
     <object>objects\objMiniStatusIndicator</object>
+    <objects name="BackgroundHandlers">
+      <object>objects\objBgSky</object>
+      <object>objects\objBgClouds</object>
+      <object>objects\objBgMidground</object>
+      <object>objects\objBgCastleMountain</object>
+      <object>objects\objBgCastleInside</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSurfaceSetup</room>
