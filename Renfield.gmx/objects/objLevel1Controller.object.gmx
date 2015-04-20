@@ -35,17 +35,19 @@ pauseTimeInCycle = 0;
 dayDuration = 45;
 nightDuration = 15;
 minWeaponSpawnY = room_height / 2;
+maxWeaponSpawnY = room_height - 20;
+xBuffer = 20;
 
-minFliesToSpawn = 10;
-maxFliesToSpawn = 10;
+minFliesToSpawn = 8;
+maxFliesToSpawn = 12;
 minSpidersToSpawn = 1;
-maxSpidersToSpawn = 2;
+maxSpidersToSpawn = 4;
 minBatsToSpawn = 1;
-maxBatsToSpawn = 2;
+maxBatsToSpawn = 4;
 minFrogsToSpawn = 1;
 maxFrogsToSpawn = 2;
 minCatsToSpawn = 0;
-maxCatsToSpawn = 2;
+maxCatsToSpawn = 4;
 
 /// Create DayNight controller instance
 roundController = instance_create(room_width / 2, room_height, objDayNightController);
