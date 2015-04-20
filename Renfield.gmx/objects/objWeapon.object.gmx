@@ -29,7 +29,7 @@
 
 moveSpeed = 0;
 hp = 1;
-baseHp = hp;
+maxHp = hp;
 armor = 1.0;
 
 xp = 0;
