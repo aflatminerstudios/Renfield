@@ -17,7 +17,7 @@ LD32
 | ---- | ---- | ---- | ---- | ---- |
 | Peasant | 5 | 1.0 | 2 | 1 |
 | Pitchfork | 5 | 1.0 | 1 | 2 |
-| Battering Ram | 2 | 1.0 | 1 | 5 |
-| Knight | 10 | 0.5 | 1 | 3 |
-| Helsing | 10 | 1.0 | 5 | 25 |
+| Battering Ram | 10 | 1.0 | 1 | 5 |
+| Knight | 50 | 0.5 | 1 | 3 |
+| Helsing | 100 | 1.0 | 5 | 25 |
 
