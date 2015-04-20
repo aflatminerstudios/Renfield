@@ -193,8 +193,8 @@
     <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel3</room>
-    <room>rooms\rmLevel2</room>
     <room>rooms\roomTestMicha</room>
+    <room>rooms\rmLevel2</room>
     <room>rooms\rmGameOver</room>
   </rooms>
   <constants number="5">
