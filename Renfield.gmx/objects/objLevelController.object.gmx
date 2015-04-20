@@ -35,10 +35,16 @@ pauseTimeInCycle = 0;
 dayDuration = 45;
 nightDuration = 15;
 minWeaponSpawnY = room_height / 2;
+
+minFliesToSpawn = 10;
 maxFliesToSpawn = 10;
-maxFrogsToSpawn = 5;
+minSpidersToSpawn = 1;
 maxSpidersToSpawn = 5;
+minBatsToSpawn = 1;
 maxBatsToSpawn = 5;
+minFrogsToSpawn = 1;
+maxFrogsToSpawn = 5;
+minCatsToSpawn = 0;
 maxCatsToSpawn = 2;
 
 
@@ -140,11 +146,11 @@ with (objWeapon)
 }
 
 /// Spawn new weapons
-intFlyCount = irandom(maxFliesToSpawn);
-intFrogCount = irandom(maxFrogsToSpawn);
-intSpiderCount = irandom(maxSpidersToSpawn);
-intBatCount = irandom(maxBatsToSpawn);
-intCatCount = irandom(maxCatsToSpawn);
+intFlyCount = irandom_range(minFliesToSpawn, maxFliesToSpawn);
+intSpiderCount = irandom_range(minSpidersToSpawn, maxSpidersToSpawn);
+intBatCount = irandom_range(minBatsToSpawn, maxBatsToSpawn);
+intFrogCount = irandom_range(minFrogsToSpawn, maxFrogsToSpawn);
+intCatCount = irandom_range(minCatsToSpawn, maxCatsToSpawn);
 
 for(i = 0; i &lt; intFlyCount; i++)
 {
