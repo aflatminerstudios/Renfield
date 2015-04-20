@@ -57,7 +57,8 @@ armor = 1.0;
 show_debug_message("Game over!");
 
 with (objLevelController) {
-    audio_stop_sound(music);
+
+    audio_stop_sound(global.music);
     gameOver = true;
     scrCleanUp();
 }
