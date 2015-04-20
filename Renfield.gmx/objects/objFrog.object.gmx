@@ -48,6 +48,7 @@ onGround = false;
 tarX = x;
 tarY = y;
 
+scale = 1;
 
 //scripts
 autoAttack = scrFrogShoot;

@@ -41,6 +41,8 @@ armor = 1.0;
 tarX = x;
 tarY = y;
 
+scale = 1;
+
 placed = false;
 held = false;
 onGround = false;

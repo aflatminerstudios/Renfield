@@ -47,6 +47,8 @@ maxHp = hp;
 tarX = x;
 tarY = y;
 
+scale = 1;
+
 //scripts
 autoAttack = scrNull;
 playerAttack = scrNull;

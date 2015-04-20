@@ -109,6 +109,8 @@ armor = 1.0;
 tarX = x;
 tarY = y;
 
+
+
 //scripts
 autoAttack = scrBatScreech;
 playerAttack = scrBatToss;

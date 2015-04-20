@@ -40,6 +40,8 @@ maxHp = hp;
 tarX = x;
 tarY = y;
 
+scale = 0.2;
+
 placed = false;
 held = false;
 onGround = false;
@@ -78,8 +80,8 @@ released = false;
 skeleton_animation_set("Moving");
 
 image_speed = 1;
-image_xscale = 0.2;
-image_yscale = 0.2;
+image_xscale = scale;
+image_yscale = scale;
 heldAnimation = "Stationary";
 placedAnimation = "Moving";
 
