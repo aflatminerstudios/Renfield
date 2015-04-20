@@ -42,6 +42,7 @@ tarY = y;
 
 placed = false;
 held = false;
+onGround = false;
 
 //scripts
 autoAttack = scrSpiderShoot;

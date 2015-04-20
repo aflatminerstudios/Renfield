@@ -41,6 +41,7 @@ tarY = y;
 
 placed = false;
 held = false;
+onGround = false;
 
 vertSpeed = 0;
 baseGravity = 0;

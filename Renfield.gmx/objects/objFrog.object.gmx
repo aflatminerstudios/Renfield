@@ -41,6 +41,7 @@ hp = 9 + level;
 armor = 1.0;
 placed = false;
 held = false;
+onGround = false;
 tarX = x;
 tarY = y;
 

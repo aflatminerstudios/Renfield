@@ -50,6 +50,7 @@ placeScript = scrPlaceBat;
 base = objBat;
 placed = objBatPlaced;
 held = objBatHeld;
+onGround = false;
 
 //For this object
 facing = 1;

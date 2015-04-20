@@ -36,6 +36,7 @@ xpToLevel = 0;
 givenXp = 0;
 level = 1;
 
+onGround = false;
 
 tarX = x;
 tarY = y;

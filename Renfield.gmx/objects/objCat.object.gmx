@@ -56,6 +56,7 @@ placeScript = scrPlace;
 base = objCat;
 placed = objCatPlaced;
 held = objCatHeld;
+onGround = false;
 
 //For this object
 baseDamage = 2;
