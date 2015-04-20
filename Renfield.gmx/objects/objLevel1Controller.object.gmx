@@ -102,7 +102,6 @@ switch (roundController.roundCount)
 {
     case 0:
         spawn1 = scrCreateSpawner(objPeasant, 20, 10, 1, spawnBPath);
-        spawn2 = scrCreateSpawner(objKnight, 2, 1, 10, spawnBPath);
         break;
     case 1:
         spawn1 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnBPath);
@@ -119,11 +118,28 @@ switch (roundController.roundCount)
         spawn3 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnCPath);
         break;
     case 4:
+        spawn1 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnBPath);
+        spawn2 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnAPath);
+        break;
     case 5:
+        spawn1 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnBPath);
+        spawn2 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnAPath);
+        spawn3 = scrCreateSpawner(objPitchforker, 5, 1, 2, spawnCPath);
+        break;
     case 6:
+      spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
+      break
     case 7:
+      spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
+      spawn2 = scrCreateSpawner(objKnight, 5, 1, 2, spawnAPath);
+      break
     case 8:
+      spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
+      spawn2 = scrCreateSpawner(objKnight, 5, 1, 2, spawnAPath);
+      spawn3 = scrCreateSpawner(objKnight, 5, 1, 2, spawnCPath);
+      break
     case 9:
+      spawn1 = scrCreateSpawner(objHelsing, 5, 1, 2, spawnBPath);
     default:
         room_goto(rmLevel2);
         break;
