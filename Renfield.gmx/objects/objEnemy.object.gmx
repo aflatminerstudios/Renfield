@@ -228,9 +228,16 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Attack the coffin!
+            <string>/// Attack the coffin and score no points!
 
 script_execute(attack, other.id, strength);
+
+points = 0;
+
+with (objScoreControl) {
+    //To make sure this kill doesn't count
+    alarm[0] = 1;
+}
 
 alarm[0] = 1;
 </string>
@@ -409,7 +416,7 @@ if (alarm[3] &lt;= 0 &amp;&amp; other.hp &gt; 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Draw self and healthbar if necessary
+            <string>/// Draw self and healthbar if necessary
 draw_self();
 if(hp &lt; baseHp) {
   var barX = x;// - sprite_xoffset;
