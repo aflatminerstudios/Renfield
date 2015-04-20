@@ -34,6 +34,7 @@
       <sprite>sprites\sprSolidWall</sprite>
     </sprites>
     <sprite>sprites\sprLadder</sprite>
+    <sprite>sprites\sprBash</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -139,6 +140,7 @@
     <object>objects\objRenfieldTest</object>
     <object>objects\objSpineAssister</object>
     <object>objects\objScoreControl</object>
+    <object>objects\objBash</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSurfaceSetup</room>
