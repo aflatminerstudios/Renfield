@@ -30,6 +30,20 @@
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 
+draw_text(400, 50, "Micha Faw - Director, Programmer Who Was There Every Day, Sounds");
+draw_text(400, 100, "Jodi Slade - Makes Arts");
+draw_text(400, 150, "Jesse Slade - As a Writer...Playtesting and Music");
+draw_text(400, 200, "John Thrasher - Programmer, Studier, Master of Animals");
+draw_text(400, 250, "James Abels - Programmer, Peasant Master");
+
+draw_text(400, 350, "Carla Castillo - Bringer of Food and Movies, Savior");
+draw_text(400, 400, "Richard Miller - Dog Distractor, Chewtoy");
+
+draw_text(400, 450, "Jen Thrasher &amp; Amber Ferguson - Also There");
+
+
+
+
 
 draw_text(400, 550, "Press any key to return to title...");
 draw_set_halign(fa_left);
