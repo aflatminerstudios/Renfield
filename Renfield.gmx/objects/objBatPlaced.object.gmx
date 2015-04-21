@@ -51,7 +51,11 @@
             <string>///Send out a soundWave
 
 if (waveCount &lt;= maxWaves) {
-    var w = instance_create(x, y, objSoundWave);
+    var xLaunch = x;
+    if(facing = -1)
+      xLaunch = x - 80;
+    var w = instance_create(xLaunch, y, objSoundWave);
+    w.image_xscale *= facing;
     w.dir = facing;
     w.level = level;
     waveCount++;
