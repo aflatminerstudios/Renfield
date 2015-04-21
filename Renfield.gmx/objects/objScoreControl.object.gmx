@@ -124,7 +124,7 @@ draw_text(200+offset, 20+offset, "Placed Animals: " + string(numPlaced));
 draw_text(10+offset, 50+offset, "Enemies Killed: " + string(numKilled));
 draw_text(200+offset, 50+offset, "Total Animals Placed: " + string(totalPlaced));
 
-draw_set_color(c_black);
+draw_set_color(c_white);
 draw_text(10, 20, "Score: " + string(scrAddLeadingZeros(score, 6)));
 draw_text(200, 20, "Placed Animals: " + string(numPlaced));
 draw_text(10, 50, "Enemies Killed: " + string(numKilled));
