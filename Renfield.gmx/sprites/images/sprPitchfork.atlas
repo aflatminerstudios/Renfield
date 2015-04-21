@@ -1,83 +1,83 @@
 
-pesant57.png
+pesant652.png
 size: 1024,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 arm
-  rotate: true
-  xy: 147, 2
+  rotate: false
+  xy: 953, 125
   size: 68, 75
   orig: 68, 75
   offset: 0, 0
   index: -1
 arm copy
   rotate: true
-  xy: 781, 92
+  xy: 643, 72
   size: 68, 75
   orig: 68, 75
   offset: 0, 0
   index: -1
 body
-  rotate: false
-  xy: 87, 12
+  rotate: true
+  xy: 643, 142
   size: 58, 134
   orig: 58, 134
   offset: 0, 0
   index: -1
 forearm
   rotate: false
-  xy: 228, 82
+  xy: 779, 136
   size: 85, 64
   orig: 85, 64
   offset: 0, 0
   index: -1
 forearm copy
   rotate: false
-  xy: 909, 151
+  xy: 866, 136
   size: 85, 64
   orig: 85, 64
   offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 147, 72
-  size: 79, 74
-  orig: 79, 74
+  xy: 262, 2
+  size: 61, 64
+  orig: 61, 64
+  offset: 0, 0
+  index: -1
+pitchfork
+  rotate: true
+  xy: 2, 68
+  size: 132, 318
+  orig: 132, 318
   offset: 0, 0
   index: -1
 shin
   rotate: true
-  xy: 2, 148
-  size: 67, 321
-  orig: 67, 321
+  xy: 322, 143
+  size: 57, 319
+  orig: 57, 319
   offset: 0, 0
   index: -1
 shin copy
   rotate: true
-  xy: 325, 150
-  size: 65, 322
-  orig: 65, 322
+  xy: 322, 84
+  size: 57, 319
+  orig: 57, 319
   offset: 0, 0
   index: -1
 thigh
   rotate: true
-  xy: 649, 151
+  xy: 2, 2
   size: 64, 130
   orig: 64, 130
   offset: 0, 0
   index: -1
 thigh copy
   rotate: true
-  xy: 781, 162
+  xy: 134, 13
   size: 53, 126
   orig: 53, 126
-  offset: 0, 0
-  index: -1
-torch
-  rotate: false
-  xy: 2, 10
-  size: 83, 136
-  orig: 83, 136
   offset: 0, 0
   index: -1
