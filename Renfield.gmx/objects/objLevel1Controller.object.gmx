@@ -103,21 +103,21 @@ alarm[1] = 1;
 switch (roundController.roundCount)
 {
     case 0:
-        spawn1 = scrCreateSpawner(objPeasant, 20, 10, 1, spawnBPath);
+        spawn1 = scrCreateSpawner(objPeasant, 25, 10, 1, spawnBPath);
         break;
     case 1:
-        spawn1 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnBPath);
+        spawn1 = scrCreateSpawner(objPitchforker, 10, 1, 1, spawnBPath);
         spawn2 = scrCreateSpawner(objPeasant, 10, 1, 1, spawnAPath);
         break;
     case 2:
         spawn1 = scrCreateSpawner(objPeasant, 10, 1, 3, spawnBPath);
-        spawn2 = scrCreateSpawner(objPeasant, 10, 1, 3, spawnAPath);
+        spawn2 = scrCreateSpawner(objPitchforker, 10, 1, 3, spawnAPath);
         spawn3 = scrCreateSpawner(objPeasant, 10, 1, 3, spawnCPath);
         break;
     case 3:
         spawn1 = scrCreateSpawner(objPitchforker, 15, 1, 2, spawnBPath);
         spawn2 = scrCreateSpawner(objPitchforker, 15, 1, 2, spawnAPath);
-        spawn3 = scrCreateSpawner(objPitchforker, 15, 1, 2, spawnCPath);
+        spawn3 = scrCreateSpawner(objPeasant, 15, 1, 2, spawnCPath);
         break;
     case 4:
         spawn1 = scrCreateSpawner(objPitchforker, 15, 1, 2, spawnBPath);
@@ -135,7 +135,7 @@ switch (roundController.roundCount)
     case 7:
       spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
       spawn2 = scrCreateSpawner(objKnight, 5, 1, 2, spawnAPath);
-      spawn2 = scrCreateSpawner(objPeasant, 10, room_speed * 10, 2, spawnAPath);
+      spawn2 = scrCreateSpawner(objPeasant, 10, room_speed * 10, 2, spawnBPath);
       break
     case 8:
       spawn1 = scrCreateSpawner(objKnight, 5, 1, 2, spawnBPath);
@@ -144,6 +144,7 @@ switch (roundController.roundCount)
       break
     case 9:
       spawn1 = scrCreateSpawner(objHelsing, 5, 1, 5, spawnBPath);
+      spawn2 = scrCreateSpawner(objPeasant, 5, room_speed * 15, 5, spawnAPath);
     default:
         room_goto(rmLevel3);
         break;

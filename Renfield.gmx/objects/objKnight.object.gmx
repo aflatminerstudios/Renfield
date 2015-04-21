@@ -33,7 +33,7 @@ armor = 0.5;
 strength = 3;
 
 facing = 1;
-spiteFacing = 1;
+spriteFacing = 1;
 moveSpeed = room_speed / 60;
 baseSpeed = moveSpeed;
 walking = true;
@@ -44,10 +44,11 @@ takeDamage = scrNull;
 
 points = 500;
 
-image_speed = 0;
-scale = 0.2;
+scale = 0.05;
 image_xscale = scale;
 image_yscale = scale;
+
+skeleton_animation_set("Walk");
 </string>
           </argument>
         </arguments>
