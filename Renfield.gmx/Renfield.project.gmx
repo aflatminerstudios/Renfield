@@ -189,12 +189,12 @@
     <object>objects\objCreditsControl</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmLevel3</room>
     <room>rooms\rmTitle</room>
     <room>rooms\rmCredits</room>
     <room>rooms\rmControls</room>
     <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmLevel1</room>
+    <room>rooms\rmLevel3</room>
     <room>rooms\roomTestMicha</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmGameOver</room>
