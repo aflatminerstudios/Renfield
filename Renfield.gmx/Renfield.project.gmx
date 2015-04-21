@@ -33,6 +33,9 @@
     </sprites>
     <sprite>sprites\sprSoundWaves</sprite>
     <sprites name="Blocks">
+      <sprite>sprites\sprWoodJumpThroughLeft</sprite>
+      <sprite>sprites\sprWoodJumpThroughRight</sprite>
+      <sprite>sprites\sprWoodJumpThrough</sprite>
       <sprite>sprites\sprJumpThroughFloor</sprite>
       <sprite>sprites\sprSolidWall</sprite>
     </sprites>
@@ -167,6 +170,9 @@
     </objects>
     <objects name="Blocks">
       <object>objects\objJumpThroughFloor</object>
+      <object>objects\objWoodJumpThroughLeft</object>
+      <object>objects\objWoodJumpThroughRight</object>
+      <object>objects\objWoodJumpThroughCenter</object>
       <object>objects\objParentFloor</object>
       <object>objects\objSolidFloor</object>
     </objects>
@@ -189,11 +195,11 @@
     <object>objects\objCreditsControl</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmLevel3</room>
+    <room>rooms\rmSurfaceSetup</room>
     <room>rooms\rmTitle</room>
     <room>rooms\rmCredits</room>
     <room>rooms\rmControls</room>
-    <room>rooms\rmSurfaceSetup</room>
+    <room>rooms\rmLevel3</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\roomTestMicha</room>
     <room>rooms\rmLevel2</room>
