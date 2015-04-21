@@ -137,6 +137,36 @@ instance_destroy();
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Update facing
+var facingCheck = sign(x - xprevious);
+if(x - xprevious != 0){
+  show_debug_message("Movement: " + string(x-xprevious) + ", facing: " + string(facingCheck));
+}
+
+if(facingCheck != 0)
+  facing = facingCheck;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -183,19 +213,6 @@ if (alarm[11] &lt;= 0) {
           <argument>
             <kind>1</kind>
             <string>///Fix facing
-
-// Start of non-working section
-var facingCheck = sign(x - xprevious);
-if(x - xprevious != 0){
-  show_debug_message("Movement: " + string(x-xprevious) + ", facing: " + string(facingCheck));
-}
-
-if(facingCheck != 0)
-  facing = facingCheck;
-// End of non-working section
-  
-  
-  
 
 image_xscale = scale * facing;
 </string>
