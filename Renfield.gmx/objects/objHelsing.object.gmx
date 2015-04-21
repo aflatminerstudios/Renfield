@@ -33,6 +33,7 @@ armor = 1.0;
 strength = 25;
 
 facing = 1;
+spriteFacing = 1;
 moveSpeed = room_speed / 60 * 5;
 baseSpeed = moveSpeed;
 walking = true;
